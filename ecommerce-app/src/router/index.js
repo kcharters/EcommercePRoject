@@ -3,6 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 
+
 import firebase from 'firebase';
 
 Vue.use(VueRouter);
@@ -51,9 +52,9 @@ const routes = [
     name: 'SignUp',
     component: () =>
     import(/* webpackChunkName: "" */ "../views/SignUp.vue")
-  }
 
-
+  {
+    
 
 ];
 
@@ -62,6 +63,7 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 });
+
 //will look in to this later
 // router.beforeEach((to,from,next) => {
 // const currentUser = firebase.auth().currentUser;

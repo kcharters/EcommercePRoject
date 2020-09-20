@@ -2,14 +2,21 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import "./registerServiceWorker";
+
 import firebase from 'firebase';
 import router from './router';
 import jQuery from'jquery';
+
+import router from "./router";
+import jQuery from'jquery';
+
+
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
 
 Vue.component('NavBar',require('./components/NavBar.vue').default);
+
 //would normally be in its own config file not here 
 //bt tutorial put it here 
 let app ='';
@@ -24,7 +31,12 @@ const firebaseConfig = {
   measurementId: "G-SP1VES4VWH"
 };
 
+
+
+
+
 firebase.initializeApp(firebaseConfig);
+
 
 firebase.auth().onAuthStateChanged(()=>{
 if(!app){
@@ -34,3 +46,9 @@ if(!app){
   }).$mount('#app');
 }
 });
+
+new Vue({
+  router,
+  render: h => h(App)
+}).$mount("#app");
+
