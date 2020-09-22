@@ -1,12 +1,12 @@
 <template>
   <div class="home">
-    <h1>Home Page</h1>
+    <NavBar></NavBar>
         <Hero></Hero>
         <products></products>
           <div class="container h-100">
         <div class="row h-100 align-items-center">
           <div class="col-md-6">
-            <img src="../assets/aboutUs.png" alt="" width="450">
+            <img  src="../assets/aboutUs.png" alt="" width="450">
           </div>
           <div class="col-md-6">
             <h3>Learn More About us</h3>
@@ -28,4 +28,5 @@ export default {
     }
 };
 </script>
+
 

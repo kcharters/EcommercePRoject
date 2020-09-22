@@ -1,5 +1,6 @@
 <template>
   <div class="sign-up">
+      <NavBar></NavBar>
       <h1>Sign Up</h1>
       <div class="container w-25 centered">
     <form class="">

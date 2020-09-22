@@ -38,14 +38,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
  .hero{
-    padding-top: 6rem;
     width: 85%;
     height: 700px;
 
   }
 
   .graphic{
-      padding-left: 170px;
+     
+    margin-left: 170px;
   }
 
 </style>
