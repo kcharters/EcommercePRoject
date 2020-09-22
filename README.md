@@ -33,5 +33,5 @@ npm install --save bootstrap jquery vue-router popperjs
 ```
 ### install firebase
 ```
-npm install ——save firebase
+npm install --save firebase
 ```
