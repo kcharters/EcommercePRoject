@@ -7,9 +7,6 @@ import firebase from 'firebase';
 import router from './router';
 import jQuery from'jquery';
 
-import router from "./router";
-import jQuery from'jquery';
-
 
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';

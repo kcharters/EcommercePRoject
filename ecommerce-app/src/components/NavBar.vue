@@ -20,6 +20,12 @@
         <li class="nav-item">
         <router-link to="/faq" class="nav-link">FAQ</router-link>
       </li>
+      <li class="nav-item">
+        <router-link to="/login" class="nav-link">Login</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/signup" class="nav-link">Signup</router-link>
+      </li>
   
     </ul>
     <form class="form-inline my-2 my-lg-0">

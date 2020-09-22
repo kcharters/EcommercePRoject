@@ -13,10 +13,8 @@
 
 </script>
 
-<style lang ="scss" >
 
 
-</script>
 
 <style lang ="scss" >
 
@@ -29,8 +27,6 @@
   color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
 
 
 #nav {
@@ -47,6 +43,4 @@
 </style>
 
 
-</style>
-   
 
