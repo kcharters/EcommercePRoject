@@ -1,2 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
-@import './admin.scss'
+@import './admin.scss';
+  
+a:hover{
+    cursor: pointer
+}
+
