@@ -1,5 +1,6 @@
 <template>
-  <div class="faq container">
+  <div class="faq">
+        <NavBar></NavBar>
     <h1>FAQ</h1>
   </div>
 </template>

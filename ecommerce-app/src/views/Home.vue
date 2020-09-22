@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+        <NavBar></NavBar>
+    <h1>Home Page</h1>
         <Hero></Hero>
         <products></products>
           <div class="container h-100">
@@ -16,7 +18,6 @@
           </div>
         </div>
       </div>
-    
   </div>
 </template>
 
