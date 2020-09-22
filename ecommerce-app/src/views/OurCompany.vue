@@ -1,5 +1,6 @@
 <template>
-  <div class="company container">
+  <div class="company">
+        <NavBar></NavBar>
     <h1> About Us </h1>
   </div>
 </template>
