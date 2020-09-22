@@ -5,8 +5,7 @@ import Home from "../views/Home.vue";
 import Login from "../views/Login.vue";
 import SignUp from "../views/SignUp.vue";
 
-
-import firebase from 'firebase';
+//import firebase from 'firebase';
 
 Vue.use(VueRouter);
 
@@ -31,17 +30,17 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "" */ "../views/FAQ.vue")
   },
-  
+
   {
     path: "/shop",
-    name: "Shop", 
+    name: "Shop",
     //to require auth fro a page
     // meta:{
     //   requiresAuth: true
     // },
     component: () =>
-    import(/* webpackChunkName: "" */ "../views/Shop.vue")
-     
+      import(/* webpackChunkName: "" */ "../views/Shop.vue")
+
   },
   {
     path: "/login",
@@ -54,7 +53,7 @@ const routes = [
     component: SignUp
 
   }
-    
+
 
 ];
 

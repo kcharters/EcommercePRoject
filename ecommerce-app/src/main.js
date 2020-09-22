@@ -2,12 +2,11 @@ import Vue from "vue";
 import App from "./App.vue";
 
 import "./registerServiceWorker";
+import router from "./router";
 
 import firebase from 'firebase';
-import router from './router';
+
 import jQuery from'jquery';
-
-
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
@@ -27,11 +26,6 @@ const firebaseConfig = {
   appId: "1:92254759656:web:24f0b98cd9972b8bae775d",
   measurementId: "G-SP1VES4VWH"
 };
-
-
-
-
-
 firebase.initializeApp(firebaseConfig);
 
 
