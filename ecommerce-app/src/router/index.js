@@ -1,6 +1,11 @@
+
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Login from "../views/Login.vue";
+import SignUp from "../views/SignUp.vue";
+
+//import firebase from 'firebase';
 
 Vue.use(VueRouter);
 
@@ -25,13 +30,29 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "" */ "../views/FAQ.vue")
   },
+
   {
     path: "/shop",
     name: "Shop",
+    //to require auth fro a page
+    // meta:{
+    //   requiresAuth: true
+    // },
     component: () =>
       import(/* webpackChunkName: "" */ "../views/Shop.vue")
-  }
 
+  },
+  {
+    path: "/login",
+    name: 'Login',
+    component: Login
+  },
+  {
+    path: "/signup",
+    name: 'SignUp',
+    component: SignUp
+
+  }
 
 
 ];
@@ -42,4 +63,13 @@ const router = new VueRouter({
   routes
 });
 
+//will look in to this later
+// router.beforeEach((to,from,next) => {
+// const currentUser = firebase.auth().currentUser;
+// const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+// if(requiresAuth && !currentUser) 
+// {next('login')}
+// else if (!requiresAuth && currentUser){next('home')}
+// else {next()}
+// });
 export default router;

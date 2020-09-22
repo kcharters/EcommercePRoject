@@ -19,6 +19,9 @@
       </li>
         <li class="nav-item">
         <router-link to="/faq" class="nav-link">FAQ</router-link>
+      </li>     
+      <li class="nav-item">
+        <a data-toggle="modal" data-target="#login" class="nav-link">Login</a>
       </li>
   
     </ul>
@@ -27,16 +30,22 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
+  <Login></Login>
 </nav>
    
   </div>
+ 
 </template>
 
 <script>
+import Login from '../views/Login.vue';
 export default {
   name: "NavBar",
   props: {
     msg: String
+  },
+  components:{
+    Login
   }
 };
 </script>

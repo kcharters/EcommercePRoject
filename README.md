@@ -1,6 +1,14 @@
 # EcommerceProject
 ## Documentation 
 
+### Install Vue globally
+npm install -g @vue/cli
+### Install Vue Locally 
+npm install vue
+### Serve locally
+npm run serve
+
+
 ## Project setup
 ```
 yarn install
@@ -35,3 +43,4 @@ npm install --save bootstrap jquery vue-router popperjs
 ```
 npm install --save firebase
 ```
+

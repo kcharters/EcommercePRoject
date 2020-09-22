@@ -2,7 +2,9 @@
 
    <div id="app">
     <NavBar></NavBar>
-    <router-view />
+
+    <router-view></router-view>
+
   </div>
 
 </template>
@@ -11,7 +13,11 @@
 
 </script>
 
+
+
+
 <style lang ="scss" >
+
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -21,8 +27,11 @@
   color: #2c3e50;
 }
 
+
+
 #nav {
   padding: 30px;
+
 
   a {
     font-weight: bold;
@@ -32,4 +41,6 @@
 }
 
 </style>
-   
+
+
+
