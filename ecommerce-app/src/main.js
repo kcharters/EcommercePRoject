@@ -4,7 +4,7 @@ import App from "./App.vue";
 import "./registerServiceWorker";
 import router from "./router";
 
-import firebase from 'firebase';
+import firebase from 'firebase/app';
 
 import jQuery from'jquery';
 window.$ = window.jQuery = jQuery;
@@ -18,15 +18,15 @@ Vue.component('products',require('./sections/products.vue').default);
 //would normally be in its own config file not here 
 //bt tutorial put it here 
 let app ='';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAPFRj6hGYC7WpSGMiAXyutMDjjQYcwp5g",
-  authDomain: "ecommerceapp-e526f.firebaseapp.com",
-  databaseURL: "https://ecommerceapp-e526f.firebaseio.com",
-  projectId: "ecommerceapp-e526f",
-  storageBucket: "ecommerceapp-e526f.appspot.com",
-  messagingSenderId: "92254759656",
-  appId: "1:92254759656:web:24f0b98cd9972b8bae775d",
-  measurementId: "G-SP1VES4VWH"
+  apiKey: process.env.VUE_APP_FIREBASE_API_KEY,
+  authDomain: process.env.VUE_APP_FIREBASE_AUTH_DOMAIN,
+  databaseURL: process.env.VUE_APP_FIREBASE_DATABASE_URL,
+  projectId: process.env.VUE_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.VUE_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.VUE_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.VUE_APP_FIREBASE_APP_ID,
 };
 firebase.initializeApp(firebaseConfig);
 
