@@ -6,11 +6,11 @@
     <form class="">
      <div class="form-group ">
      <label for="signupInputEmail1">Email address</label>
-    <input type="text" class="form-control" v-model="email" placeholder="Email">
+    <input type="text" class="form-control" v-model="email" placeholder="Email" required>
     </div>
     <div class="form-group">
      <label for="signupInputPassword1">Password</label>
-    <input type="password" class="form-control" v-model="password" placeholder="Password">
+    <input type="password" class="form-control" v-model="password" placeholder="Password" required>
     </div>
     <button type="submit" class="btn btn-primary" @click="signUp">Create Account</button>
     <div class="form-group">
@@ -36,12 +36,17 @@ export default {
         signUp: function(){
             firebase.auth().createUserWithEmailAndPassword(this.email,this.password).then(
                  (user) => {
-                 this.$router.push('shop')
+           // var user = firebase.auth().currentUser;
+            this.$router.push('shop')     
+            console.log(user)      
                 },
                 (err) => {
                     alert('Oh no!' + err.message)
                 }
-            )
+            ).catch((error)=>{
+                var errorCode = error.code;
+            var errorMessage = error.message;
+            });
         }
     }
     
