@@ -9,7 +9,7 @@
     "watch" : "vue-cli-service serve --watch --inline-vue"
   },
   "dependencies": {
-    "bootstrap": "^4.5.2",
+    "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
     "firebase": "^7.21.0",
     "jQuery": "^1.7.4",
@@ -20,7 +20,8 @@
     "popper.js": "^1.16.1",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
-    "vue-router": "^3.4.3"
+    "vue-router": "^3.5.1",
+    "vue-simple-password-meter": "0.0.24"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",
