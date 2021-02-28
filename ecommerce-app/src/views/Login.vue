@@ -22,7 +22,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-       <button type="button" class="btn btn-primary" data-dismiss="modal" @click="login" >Login</button>
+       <button type="button" class="btn btn-primary" data-dismiss="modal" v-on:click="login">Login</button>
       </div>
     </div>
   </div>
@@ -37,20 +37,25 @@ export default {
     name: "Login",
     data(){
         return{
-          email:'',
-          password:''
+          email: null,
+          password:null
         };
     },
     methods: {
-        login: function(){
-            firebase.auth().signInWithEmailAndPassword(this.email,this.password).then(
-              (user)=>{
-                this.$router.push('shop')
-              },
-              (err)=>{
-                alert('Oh no!' + err.message)
-              }
-            )
+        login(){
+          firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+  .then(() => {
+    // Signed in
+    this.$router.push('shop')
+    document.getElementById('loginbutton').innerHTML("Welcome")
+    // ...
+  })
+  .catch((error) => {
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    alert("Incorrect Email or password please try again.")
+    this.$router.push('login')
+  });
         }
     }
 

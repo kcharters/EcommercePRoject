@@ -5,7 +5,7 @@ import "./registerServiceWorker";
 import router from "./router";
 
 import firebase from 'firebase/app';
-
+import "firebase/auth";
 import jQuery from'jquery';
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';

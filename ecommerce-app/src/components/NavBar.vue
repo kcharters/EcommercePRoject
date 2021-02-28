@@ -21,7 +21,7 @@
         <router-link to="/faq" class="nav-link">FAQ</router-link>
       </li>     
       <li class="nav-item">
-        <a data-toggle="modal" data-target="#login" class="nav-link">Login</a>
+        <a data-toggle="modal" data-target="#login" class="nav-link" id="loginbutton">Login</a>
       </li>
   
     </ul>

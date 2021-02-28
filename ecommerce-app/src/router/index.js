@@ -6,8 +6,8 @@ import Admin from "../views/Admin.vue";
 
 import Login from "../views/Login.vue";
 import SignUp from "../views/SignUp.vue";
-//import firebase from 'firebase';
-
+import firebase from 'firebase/app';
+import "firebase/auth";
 Vue.use(VueRouter);
 
 const routes = [
@@ -41,9 +41,9 @@ const routes = [
     path: "/shop",
     name: "Shop",
     //to require auth fro a page
-    // meta:{
-    //   requiresAuth: true
-    // },
+    meta:{
+      requiresAuth: true
+     },
     component: () =>
       import(/* webpackChunkName: "" */ "../views/Shop.vue")
 
@@ -64,18 +64,28 @@ const routes = [
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 });
 
-//will look in to this later
-// router.beforeEach((to,from,next) => {
-// const currentUser = firebase.auth().currentUser;
-// const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-// if(requiresAuth && !currentUser) 
-// {next('login')}
-// else if (!requiresAuth && currentUser){next('home')}
-// else {next()}
-// });
+firebase.getCurrentUser = () => {
+  return new Promise((resolve, reject) => {
+      const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+          unsubscribe();
+          resolve(user);
+      }, reject);
+  })
+};
+
+
+router.beforeEach(async (to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  if (requiresAuth && !await firebase.getCurrentUser()){
+    next('SignUp');
+  }else{
+    next();
+  }
+});
+
 export default router;
