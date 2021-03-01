@@ -1,15 +1,13 @@
 <template>
-  <div class="shop container">
-  <div class="shop">
+  <div class="faq">
         <NavBar></NavBar>
-    <h1> Why Not Go Shopping </h1>
-  </div>
+    <h1>FAQ</h1>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Shop",
+    name: "FAQ",
     components:{
 
     }
