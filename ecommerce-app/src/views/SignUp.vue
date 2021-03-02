@@ -1,29 +1,78 @@
 <template>
-  <div class="sign-up">
-      <NavBar></NavBar>
-      <h1>Sign Up</h1>
-      <div class="container w-25 centered">
-    <form class="">
-     <div class="form-group ">
-     <label for="signupInputEmail1">Email address</label>
-    <input type="text" class="form-control" v-model="email" placeholder="Email" required>
-    </div>
-    <div class="form-group">
-     <label for="signupInputPassword1">Password</label>
+  <div>
+     <NavBar></NavBar>
+    <div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header">Register</div>
+          <div class="card-body">
+            <div v-if="error" class="alert alert-danger">{{error}}</div>
+            <form action="#" @submit.prevent="submit">
+              <div class="form-group row">
+                <label for="name" class="col-md-4 col-form-label text-md-right">Name</label>
 
+                <div class="col-md-6">
+                  <input
+                    id="name"
+                    type="name"
+                    class="form-control"
+                    name="name"
+                    value
+                    required
+                    autofocus
+                    v-model="form.name"
+                  />
+                </div>
+              </div>
 
-    <input type="password" class="form-control" v-model="password" placeholder="Password" required title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
-    <span v-if="score === 0">Use better password</span>
+              <div class="form-group row">
+                <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
+
+                <div class="col-md-6">
+                  <input
+                    id="email"
+                    type="email"
+                    class="form-control"
+                    name="email"
+                    value
+                    required
+                    autofocus
+                    v-model="form.email"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
+
+                <div class="col-md-6">
+                  <input
+                    id="password"
+                    type="password"
+                    class="form-control"
+                    name="password"
+                    required
+                     title="Password must be 8 characters including 1 uppercase letter, 1 lowercase letter and numeric characters" 
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                    v-model="form.password"
+                  />
+                    <span v-if="score === 0">Use better password</span>
     <span v-if="score === 1">Use better password</span>
     <span v-if="score === 2">Use better password</span>
-     <password-meter :password="password" @score="onScore"/>
+     <password-meter :password="form.password" @score="onScore"/>
+                </div>
+              </div>
+
+              <div class="form-group row mb-0">
+                <div class="col-md-8 offset-md-4">
+                  <button type="submit" class="btn btn-primary">Register</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
-    <button type="submit" class="btn btn-primary" v-on:click="signUp" :disabled='isDisabled'>Create Account</button>
-    <div class="form-group">
-    <span>Already have an Account? <a data-toggle="modal" data-target="#login" class="link" > Login here </a></span>
-</div>
-  </form>
-  </div>
   </div>
 </template>
 
@@ -35,38 +84,40 @@ export default {
     components: { passwordMeter },
     data(){
         return{
-            email:'',
+          form:{
+           name: "",
+            email:"",
             password: null,
             score: null
+            },
+            error:null
         };
     },
     methods: {
-           signUp(){
-          firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-  .then(() => {
-    // Signed in
-    this.$router.push('shop')
-    // ...
-  })
-  .catch((error) => {
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    alert("Incorrect Email or password please try again.")
-  });
-        },
+           submit() {
+      firebase
+        .auth()
+        .createUserWithEmailAndPassword(this.form.email, this.form.password)
+        .then(data => {
+          data.user
+            .updateProfile({
+              displayName: this.form.name
+            })
+            .then(() => {
+                 this.$router.replace({ name: "Shop" });
+            });
+        })
+        .catch(err => {
+          this.error = err.message;
+        });
+    },
+ 
        onScore({ score, strength }) {
       this.score = score; 
     }
-    },
-     computed: {
-  	isDisabled: function(){
-    	return !this.password;
-            }
-        }
+     },
 
-    
   
-    
 };
 </script>
 <style scoped>

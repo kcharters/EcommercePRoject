@@ -10,6 +10,9 @@ import jQuery from'jquery';
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
+import store from './store';
+
+Vue.config.productionTip = false;
 
 Vue.component('NavBar',require('./components/NavBar.vue').default);
 Vue.component('Hero',require('./components/Hero.vue').default);
@@ -31,17 +34,13 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-firebase.auth().onAuthStateChanged(()=>{
-if(!app){
-  app = new Vue({
-    router,
-    render: h => h(App)
-  }).$mount('#app');
-}
+firebase.auth().onAuthStateChanged(user => {
+  store.dispatch("fetchUser", user);
 });
 
 new Vue({
   router,
+  store,
   render: h => h(App)
 }).$mount("#app");
 
