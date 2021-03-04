@@ -19,18 +19,28 @@
       </li>
         <li class="nav-item">
         <router-link to="/faq" class="nav-link">FAQ</router-link>
-      </li>     
-      <li class="nav-item">
-        <a data-toggle="modal" data-target="#login" class="nav-link">Login</a>
       </li>
-  
+       <template v-if="user.loggedIn">
+            <li class="nav-link">{{user.data.displayName}}</li>
+            <li class="nav-item">
+              <a class="nav-link" @click.prevent="signOut">Sign out</a>
+            </li>
+          </template>
+          <template v-else>
+            <li class="nav-item">
+              <router-link to="login" class="nav-link">Login</router-link>
+            </li>
+            <li class="nav-item">
+              <router-link to="signup" class="nav-link">Register</router-link>
+            </li>
+          </template>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
   </div>
-  <Login></Login>
+
 </nav>
    
   </div>
@@ -39,6 +49,8 @@
 
 <script>
 import Login from '../views/Login.vue';
+import { mapGetters } from "vuex";
+import firebase from "firebase";
 export default {
   name: "NavBar",
   props: {
@@ -46,7 +58,25 @@ export default {
   },
   components:{
     Login
-  }
+  },
+  computed: {
+    ...mapGetters({
+// map `this.user` to `this.$store.getters.user`
+      user: "user"
+    })
+  },
+  methods: {
+    signOut() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.replace({
+            name: "Home"
+          });
+        });
+    }
+  } 
 };
 </script>
 
