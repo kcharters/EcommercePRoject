@@ -3,7 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
-
+//import SignUpModal from "..";
 import Login from "../views/Login.vue";
 import SignUp from "../views/SignUp.vue";
 //import firebase from 'firebase';
@@ -58,8 +58,14 @@ const routes = [
     name: 'SignUp',
     component: SignUp
 
-  }
+  },
+/*   {
+    path: "/signUpModal",
+    name: 'SignUpModal',
+    component: SignUpModal
 
+  },
+ */
 
 ];
 

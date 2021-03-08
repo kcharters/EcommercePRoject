@@ -1,10 +1,10 @@
 <template>
-  <div class="shop container">
   <div class="shop">
+
         <NavBar></NavBar>
     <h1> Why Not Go Shopping </h1>
   </div>
-  </div>
+
 </template>
 
 <script>

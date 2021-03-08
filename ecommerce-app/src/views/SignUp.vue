@@ -59,18 +59,19 @@ export default {
     }
     },
      computed: {
-  	isDisabled: function(){
+  	/* isDisabled: function(){
     	return !this.password;
 
 
-            ).catch((error)=>{
+             .catch((error)=>{
                 var errorCode = error.code;
             var errorMessage = error.message;
             });
         }
-
-    }
+ 
+    } */
   }
+  
     
 };
 </script>
