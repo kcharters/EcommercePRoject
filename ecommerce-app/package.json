@@ -11,7 +11,8 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
-    "firebase": "^7.21.0",
+    "firebase": "^7.24.0",
+    "firebaseui": "^4.7.3",
     "jQuery": "^1.7.4",
     "jquery": "^3.5.1",
     "jsdom": "^16.4.0",
@@ -21,7 +22,8 @@
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",
     "vue-router": "^3.5.1",
-    "vue-simple-password-meter": "0.0.24"
+    "vue-simple-password-meter": "0.0.24",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",
