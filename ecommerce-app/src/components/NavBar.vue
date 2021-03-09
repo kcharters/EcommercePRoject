@@ -20,6 +20,9 @@
         <li class="nav-item">
         <router-link to="/faq" class="nav-link">FAQ</router-link>
       </li>
+            <li class="nav-item">
+        <router-link to="/contactus" class="nav-link">Contact Us</router-link>
+      </li>
        <template v-if="user.loggedIn">
             <li class="nav-link">{{user.data.displayName}}</li>
             <li class="nav-item">

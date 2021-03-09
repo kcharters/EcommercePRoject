@@ -6,6 +6,7 @@ import Admin from "../views/Admin.vue";
 //import SignUpModal from "..";
 import Login from "../views/Login.vue";
 import SignUp from "../views/SignUp.vue";
+import ContactUs from "../views/ContactUs.vue";
 import firebase from 'firebase/app';
 import "firebase/auth";
 Vue.use(VueRouter);
@@ -47,6 +48,15 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "" */ "../views/Shop.vue")
 
+  },
+  {
+    path: "/contactus",
+    name: "ContactUs",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "" */ "../views/ContactUs.vue")
   },
   {
     path: "/login",
