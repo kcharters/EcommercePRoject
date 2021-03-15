@@ -17,13 +17,16 @@
           </div>
         </div>
       </div>
+      <SignUpModal></SignUpModal>
   </div>
 </template>
 
 <script>
+import SignUpModal from '../components/SignUpModal.vue';
 export default {
     name: "Home",
     components:{
+      SignUpModal
 
     }
 };
