@@ -62,7 +62,10 @@
      <password-meter :password="form.password" @score="onScore"/>
                 </div>
               </div>
-
+               <label for="robot" class="col-sm-2 col-form-label"></label>
+  <div class="form-group" data-size="compact" >
+       <div id="recaptcha-main" class="grecaptcha" :data-sitekey="sitekey"></div>
+      </div>
               <div class="form-group row mb-0">
                 <div class="col-md-8 offset-md-4">
                   <button type="submit" class="btn btn-primary">Register</button>
@@ -87,12 +90,34 @@ export default {
           form:{
            name: "",
             email:"",
-            password: null,
-            score: null
+            password: null,  
+            robot: false,
             },
-            error:null
+            score: null,
+            error:null,
+            sitekey: process.env.VUE_APP_SITE_CAPTCHA
         };
     },
+    mounted(){
+    if (typeof grecaptcha === "undefined") {
+        var script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+        script.onload = this.renderWait;
+        document.head.appendChild(script);
+    } 
+},
+
+
+   created(){
+     this.$nextTick(function(){
+       grecaptcha.render('recaptcha-main')
+     })
+    var $recaptcha = document.querySelector('recaptcha-main');
+
+    if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+    }
+   },
     methods: {
            submit() {
       firebase
@@ -114,7 +139,10 @@ export default {
  
        onScore({ score, strength }) {
       this.score = score; 
-    }
+    },
+     onVerify: function (response) {
+      if (response) this.form.robot = true;
+    },
      },
 
   
