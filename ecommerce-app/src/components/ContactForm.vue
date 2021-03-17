@@ -5,11 +5,11 @@
       <div class="contact-container">
         <div class="contact-form">
           <h3>Send your questions here</h3>
-          <form>
+          <form class="contact-form" @submit.prevent="sendEmail">
             <div class="input-row">
               <div class="input-group form-inline">
                 <label> First Name: </label>
-                <input type="text" />
+                <input type="text" name = "user_name"/>
               </div>
               <div class="input-group form-inline">
                 <label> Last Name: </label>
@@ -23,13 +23,13 @@
               </div>
               <div class="input-email form-inline">
                 <label> Email: </label>
-                <input type="email" />
+                <input type="email"  name ="user_email"/>
               </div>
             </div>
             <div class ="input-group form-inline" >
                <label > Subject: </label>
-            <textarea  rows="10"></textarea>
-            <button type="submit"> Submit </button>
+            <textarea name="message"  rows="10"></textarea>
+            <button type="submit" value="Send"> Submit </button>
           
             </div>
            
@@ -64,11 +64,23 @@
 </template>
 
 <script>
+import emailjs from 'emailjs-com';
 export default {
   name: "ContactForm",
   props: {
     msg: String
+  },
+    methods: {
+    sendEmail: (e) => {
+      emailjs.sendForm('service_8630eyl', 'contact_form', e.target, 'user_psNoZ84QoMJgDzqhblmjK')
+        .then((result) => {
+            console.log('SUCCESS!', result.status, result.text);
+        }, (error) => {
+            console.log('FAILED...', error);
+        });
+    }
   }
+
 };
 </script>
 

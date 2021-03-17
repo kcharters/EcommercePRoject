@@ -11,6 +11,8 @@ window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
 import store from './store';
+import{ init } from 'emailjs-com';
+init("user_psNoZ84QoMJgDzqhblmjK");
 
 Vue.config.productionTip = false;
 
