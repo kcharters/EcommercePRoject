@@ -5,30 +5,28 @@
       <div class="contact-container">
         <div class="contact-form">
           <h3>Send your questions here</h3>
-          <form class="contact-form" @submit.prevent="sendEmail">
+          <form class="contact-form"   v-on:submit.prevent="sendEmail">
             <div class="input-row">
-              <div class="input-group form-inline">
-                <label> First Name: </label>
-                <input type="text" name = "user_name"/>
+              <div class="input-group">
+                <label> Full Name:  </label>
+                <input type="text" v-model.trim="$v.fullname.$model"   name = "user_name"/>
+                <div class="invalid-feedback"> Full Name is required</div>
               </div>
-              <div class="input-group form-inline">
-                <label> Last Name: </label>
-                <input type="text" />
-              </div>
+             
             </div>
             <div class="input-row ">
-              <div class="input-phone form-inline">
+              <div class="input-group form-inline">
                 <label> Phone: </label>
-                <input type="text" />
+                <input type="text" v-model.trim="phone" />
               </div>
-              <div class="input-email form-inline">
+              <div class="input-group form-inline">
                 <label> Email: </label>
-                <input type="email"  name ="user_email"/>
+                <input type="email" v-model.trim="email"  name ="user_email"/>
               </div>
             </div>
-            <div class ="input-group form-inline" >
+            <div class ="input-group form-inline">
                <label > Subject: </label>
-            <textarea name="message"  rows="10"></textarea>
+            <textarea v-model.trim="message" name="message"  rows="10"></textarea>
             <button type="submit" value="Send"> Submit </button>
           
             </div>
@@ -64,17 +62,42 @@
 </template>
 
 <script>
+import { required } from 'vuelidate/lib/validators'
 import emailjs from 'emailjs-com';
 export default {
   name: "ContactForm",
+  data: function() {
+    return{
+      fullname: '',
+      email: '',
+      phone: '',
+      message: ''
+    }
+
+  },
+  validations: {
+    fullname: {required}
+  },
+  
   props: {
     msg: String
   },
     methods: {
+    /*   submit: () => {
+        this.$v,$touch();
+        if(this.$v.$pendding || this.$v.$error) return;
+        alert('Data Submitted')
+      }, */
     sendEmail: (e) => {
+
+ /*       this.$v,$touch();
+        if(this.$v.$pendding || this.$v.$error) return;
+        alert('Data Submitted') */
+
       emailjs.sendForm('service_8630eyl', 'contact_form', e.target, 'user_psNoZ84QoMJgDzqhblmjK')
         .then((result) => {
             console.log('SUCCESS!', result.status, result.text);
+            alert("message sent")
         }, (error) => {
             console.log('FAILED...', error);
         });
@@ -126,13 +149,7 @@ label{
   flex-basis: 45%;
 }
 
-input{
-  width: 100%;
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-  padding-bottom: 5px;
-}
+
 textarea{
   width: 100%;
   box-sizing: border-box;

@@ -13,8 +13,10 @@ import './assets/styles.scss';
 import store from './store';
 import{ init } from 'emailjs-com';
 init("user_psNoZ84QoMJgDzqhblmjK");
+import Vuelidate from 'vuelidate'
 
 Vue.config.productionTip = false;
+Vue.use(Vuelidate);
 
 Vue.component('NavBar',require('./components/NavBar.vue').default);
 Vue.component('ContactForm',require('./components/ContactForm.vue').default);
