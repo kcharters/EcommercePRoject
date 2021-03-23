@@ -1,5 +1,6 @@
 # EcommerceProject
 ## Documentation 
+This project is an E-commerce site using Vue.js framework, firebase for the backend and Stripe for secure payments. 
 
 ### Install Vue globally
 npm install -g @vue/cli
@@ -7,7 +8,6 @@ npm install -g @vue/cli
 npm install vue
 ### Serve locally
 npm run serve
-
 
 ## Project setup
 ```
@@ -43,4 +43,13 @@ npm install --save bootstrap jquery vue-router popperjs
 ```
 npm install --save firebase
 ```
-
+### Deploy
+Run build command first
+to deploy hosting only use
+```
+firebase deploy --only hosting 
+```
+to deploy hosting and database use 
+```
+firebase dploy
+```
