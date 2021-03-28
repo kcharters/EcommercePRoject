@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",
+    "@types/vuelidate": "^0.7.14",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",

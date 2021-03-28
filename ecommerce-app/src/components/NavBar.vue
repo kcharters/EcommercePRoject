@@ -69,6 +69,7 @@ export default {
     })
   },
   methods: {
+    
     signOut() {
       firebase
         .auth()
@@ -80,6 +81,7 @@ export default {
         });
     }
   } 
+
 };
 </script>
 
