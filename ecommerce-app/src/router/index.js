@@ -3,6 +3,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Admin from "../views/Admin.vue";
+import store from '../store/index.js';
 //import SignUpModal from "..";
 import Login from "../views/Login.vue";
 import SignUp from "../views/SignUp.vue";
@@ -41,7 +42,7 @@ const routes = [
   {
     path: "/shop",
     name: "Shop",
-    //to require auth fro a page
+    //to require auth from a page
     meta:{
       requiresAuth: true
      },
@@ -79,11 +80,18 @@ const routes = [
 
 ];
 
+
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
 });
-
-
+router.beforeEach(async (to, from, next) => {
+  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+  if (requiresAuth && !await firebase.getCurrentUser()){
+    next('SignUp');
+  }else{
+    next();
+  }
+});
 export default router;
