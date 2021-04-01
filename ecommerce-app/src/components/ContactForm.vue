@@ -5,7 +5,7 @@
       <div class="contact-container">
         <div>
           <h3>Send your questions here</h3>
-          <form id="contact-form" class="contact-form" @sumbit.prevent="submitForm"> 
+          <form id="contact-form" class="contact-form"  @sumbit.prevent="submitForm"> 
             <div class="form-row">
               <input type="hidden" name="contact_number">
               <div class="form-group col-md-12">
@@ -164,7 +164,7 @@ export default {
       email: "",
       phone: "",
       message: "",
-      submitStatus: null
+     submitStatus: null
     }
   },
   validations: {
@@ -220,23 +220,18 @@ export default {
 
 
 
-    submitForm (e) {
+    submitForm () {
       this.$v.$touch();
       if (this.$v.$invalid) {
         this.submitStatus = "FAIL";
         
       } else {
-
-     
-          this.submitStatus = "SUCCESS";
-      
         
-    };
-    emailjs
+         emailjs
         .sendForm(
           "service_8630eyl",
           "contact_form",
-          e.target,
+          this,
           "user_psNoZ84QoMJgDzqhblmjK"
         )
         .then(
@@ -248,6 +243,13 @@ export default {
             console.log("FAILED...", error);
           }
         );
+
+     
+       this.submitStatus = "SUCCESS";
+      
+        
+    };
+   
 
   },
 /* 
