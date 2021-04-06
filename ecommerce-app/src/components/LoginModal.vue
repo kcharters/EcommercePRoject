@@ -1,8 +1,20 @@
 <template>
-  <div >
-     <NavBar></NavBar>
-    <div>
-      <div class="col-md-8">
+ <div class="loginmodal">
+    <div
+      class="hidden modal fade"
+      id="loginmodal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalCenterTitle"
+      aria-hidden="true"
+    >
+     <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+      
+        <div class="modal-body">
+          <div class="col-md-12">
+        <div class="card">
         <div class="card">
           <div class="card-header">Login</div>
           <div class="card-body">
@@ -11,7 +23,7 @@
               <div class="form-group row">
                 <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
 
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <input
                     id="email"
                     type="email"
@@ -26,7 +38,7 @@
               </div>
               <div class="form-group row">
                 <label for="password" class="col-md-4 col-form-label text-md-right">Password</label>
-                <div class="col-md-6">
+                <div class="col-md-8">
                   <input
                     id="password"
                     type="password"
@@ -43,13 +55,22 @@
                 </div>
               </div>
             </form>
-          </div>
+            </div>
         </div>
       </div>
     </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        
+    
+      </div>
+    </div>
+    </div>
   </div>
+  </div>
+ </div>
 </template>
-
 <script>
 import firebase from 'firebase'
 
@@ -75,6 +96,8 @@ export default {
         .catch(err => {
           this.error = err.message;
         });
+         $('body').removeClass('modal-open');
+        $('.modal-backdrop').remove();
     },
      onScore({ score, strength }) {
       this.score = score; 
@@ -82,5 +105,7 @@ export default {
   }
 };
 </script>
-<style scoped>
+<style scoped >
+
 </style>
+

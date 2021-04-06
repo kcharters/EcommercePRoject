@@ -2,15 +2,22 @@
   <div class="contactus">
     <NavBar></NavBar>
     <ContactForm></ContactForm>
+     <LoginModal></LoginModal>
+      <SignUpModal></SignUpModal>
   </div>
 </template>
 
 <script>
+
+import LoginModal from '../components/LoginModal.vue';
+import SignUpModal from '../components/SignUpModal.vue';
 export default {
-  name: "ContactUs",
-  props: {
-    msg: String,
-  },
+    name: "Home",
+    components:{
+      SignUpModal,
+      LoginModal
+
+    }
 };
 </script>
 

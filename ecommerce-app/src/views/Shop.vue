@@ -2,6 +2,8 @@
   <div class="shop">
 
         <NavBar></NavBar>
+         <LoginModal></LoginModal>
+      <SignUpModal></SignUpModal>
     <h1 v-if="user"> Why Not Go Shopping </h1>
   </div>
 
@@ -9,8 +11,8 @@
 
 <script>
 import { mapGetters } from "vuex";
-
-
+import LoginModal from '../components/LoginModal.vue';
+import SignUpModal from '../components/SignUpModal.vue';
 
 export default {
   computed: {
@@ -19,5 +21,10 @@ export default {
       user: "user"
     })
   },
+    components:{
+      SignUpModal,
+      LoginModal
+
+    }
 };
 </script>
