@@ -91,6 +91,9 @@
                 </div>
               </div>
             </div>
+             <div class="form-group" data-size="compact" >
+       <div id="recaptcha-main" class="g-recaptcha" :data-sitekey="sitekey"></div>
+      </div>
             <div class="form-row">
               <div class="form-group col-md-12 ">
                 <label> Subject: </label>
@@ -103,7 +106,7 @@
                   }"
                   name="message"
                   rows="10"
-                ></textarea>
+                ></textarea> 
 
                 <div class="valid-feedback">Your Message is Valid</div>
                 <div class="invalid-feedback">
@@ -177,7 +180,40 @@ export default {
   props: {
     msg: String,
   },
+   data() {
+    return {
+      form: {
+        robot: false,
+        
+      },
+      sitekey: process.env.VUE_APP_SITE_CAPTCHA
+    }
+   },
+  mounted(){
+    if (typeof grecaptcha === "undefined") {
+        var script = document.createElement("script");
+        script.src = "https://www.google.com/recaptcha/api.js?render=explicit";
+        script.onload = this.renderWait;
+        document.head.appendChild(script);
+    } 
+},
+
+   created(){
+     this.$nextTick(function(){
+       grecaptcha.render('recaptcha-main')
+     })
+    var $recaptcha = document.querySelector('recaptcha-main');
+
+    if($recaptcha) {
+        $recaptcha.setAttribute("required", "required");
+    }
+   },
+
   methods: {
+
+     onVerify: function (response) {
+      if (response) this.form.robot = true;
+    },
 /*       submit: (e) => {
             emailjs
         .sendForm(

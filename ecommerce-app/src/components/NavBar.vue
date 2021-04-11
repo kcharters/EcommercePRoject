@@ -31,10 +31,11 @@
           </template>
           <template v-else>
             <li class="nav-item">
-              <router-link to="login" class="nav-link">Login</router-link>
+              <p class="nav-link" data-toggle="modal" data-target="#loginmodal">Login</p>
+              <!--dont use router link when using modal-->
             </li>
             <li class="nav-item">
-              <router-link to="signup" class="nav-link">Register</router-link>
+              <p class="nav-link" data-toggle="modal" data-target="#signupmodal">Register</p>
             </li>
           </template>
     </ul>
@@ -51,7 +52,6 @@
 </template>
 
 <script>
-import Login from '../views/Login.vue';
 import { mapGetters } from "vuex";
 import firebase from "firebase";
 export default {
@@ -59,9 +59,7 @@ export default {
   props: {
     msg: String
   },
-  components:{
-    Login
-  },
+  
   computed: {
     ...mapGetters({
 // map `this.user` to `this.$store.getters.user`
