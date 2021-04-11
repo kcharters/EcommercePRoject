@@ -12,6 +12,7 @@
     "@popperjs/core": "^2.9.1",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
+    "emailjs-com": "^2.6.4",
     "firebase": "^7.24.0",
     "firebaseui": "^4.7.3",
     "jQuery": "^1.7.4",
@@ -24,10 +25,12 @@
     "vue": "^2.6.11",
     "vue-router": "^3.5.1",
     "vue-simple-password-meter": "0.0.24",
+    "vuelidate": "^0.7.6",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@types/jquery": "^3.5.5",
+    "@types/vuelidate": "^0.7.14",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-pwa": "~4.5.0",
     "@vue/cli-plugin-router": "~4.5.0",
