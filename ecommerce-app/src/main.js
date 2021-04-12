@@ -10,10 +10,10 @@ import jQuery from'jquery';
 window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
-import store from './store';
+// import store from './store';
 import{ init } from 'emailjs-com';
 init("user_psNoZ84QoMJgDzqhblmjK");
-import Vuelidate from 'vuelidate'
+import Vuelidate from 'vuelidate';
 import store from './store/index.js';
 
 Vue.config.productionTip = false;

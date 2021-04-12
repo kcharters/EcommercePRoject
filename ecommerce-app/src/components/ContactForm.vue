@@ -360,6 +360,8 @@ button {
   font-weight: bold;
   height: 40px;
   border-radius: 5px;
+  color: black;
+  
 }
 
 tr td:first-child {

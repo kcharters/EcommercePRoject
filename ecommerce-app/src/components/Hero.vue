@@ -5,20 +5,21 @@
             <div class="col-md-5">
               <div class="hero-content">
                 <h1 class="hero-title">
-                  Beks + Kirstens All in One Shop
+                 Welcome to Our Store
                 </h1>
+                <h6>shop for all your coffee themed apparel</h6>
                 <p>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam tempora, iure delectus totam minus quam aperiam ratione dolores magni voluptates ut necessitatibus odio ipsum fuga, voluptas ab praesentium nihil?
                 </p>
                 <div class="hero-btn mt-5">
-                    <button class="btn custom-btn btn-info mr-4">Explore</button>
-                    <button class="btn custom-btn btn-outline-secondary">Products</button>
+                    <button class="btn btn-secondary btn-info mr-4">Explore</button>
+                    <button class="btn btn-secondary btn-info mr-4 ">Products</button>
                 </div>
               </div>
             </div>
             <div class="col-md-7">
                 <div class="graphic">
-                    <img src="../assets/Hero.png" alt="">
+                    <img class="responsive" src="../assets/Hero.png" alt="">
                 </div>
             </div>
           </div>
@@ -37,16 +38,48 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
  .hero{
-    width: 85%;
+ 
     height: 700px;
 
   }
-
-  .graphic{
-     
-    margin-left: 170px;
+ 
+  .hero-title{
+     font-family: 'Indie Flower';
+    color:white;
   }
+  p{
+     font-family: 'Indie Flower';
+    color:white;
+  }
+  h6{
+          font-family: 'Indie Flower';
+    color:white;
+  }
+  .graphic{
+     width: 100%;
 
+  height: auto;
+  margin: auto;
+  }
+     
+@media (max-width: 1200px) {
+.graphic{
+     width: 100%;
+         margin:auto;
+
+
+  }
+  img.responsive{
+     width: 100%;
+       height: auto;
+       align-items: center;
+        margin:auto;
+  
+
+  }
+}
 </style>
 
