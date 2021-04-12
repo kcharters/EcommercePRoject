@@ -6,40 +6,40 @@
               
               <div class="col-md-4">
                   <div class="card product-item">
-                    <img src="../assets/Avo.png" class="card-img-top" alt="...">
+                    <img src="https://canary.contestimg.wish.com/api/webimage/5df9d9faf8f36905396b540b-4-large.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Fresh Avocado</h5>
                             <p class="card-text">
                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis convallis urna, a molestie justo. Quisque cursus libero et condimentum vulputate
                             </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-secondary btn-info mr-4">Add to Cart</a>
                         </div>
                     </div>
               </div>
 
               <div class="col-md-4">
                   <div class="card product-item">
-                    <img src="../assets/orange.png" class="card-img-top" alt="...">
+                    <img src="https://ae01.alicdn.com/kf/H97fb56892e8441ca9a2c86da63594670H/Women-s-Canvas-Bag-Cartoon-Coffee-Printing-Shopping-Bags-Female-Large-Capacity-Shoulder-Tote-Bag-Eco.jpg_640x640.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Best Orange</h5>
                             <p class="card-text">
                              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis convallis urna, a molestie justo. Quisque cursus libero et condimentum vulputate
                             </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-secondary btn-info mr-4">Add to Cart</a>
                         </div>
                     </div>
               </div>
 
               <div class="col-md-4">
                   <div class="card product-item">
-                    <img src="../assets/Pinapple.png" class="card-img-top" alt="...">
+                    <img src="https://ae01.alicdn.com/kf/H4734806cb36945ea8efbaef5b2cc9abcd/Fox-Coffee-Enamel-Pin-Custom-Lover-Drink-Newspaper-Brooches-Bag-Lapel-Pin-Cartoon-Animal-Badge-Jewelry.jpg_Q90.jpg_.webp" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Pine  Apple</h5>
                             <p class="card-text">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis convallis urna, a molestie justo. Quisque cursus libero et condimentum vulputate
 
                             </p>
-                            <a href="#" class="btn btn-primary">Add to Cart</a>
+                            <a href="#" class="btn btn-secondary btn-info mr-4">Add to Cart</a>
                         </div>
                     </div>
               </div>
@@ -65,6 +65,13 @@ export default {
         margin-top: 7rem;
         background: #f2f2f2;
         padding-bottom: 3rem;
+        background-color: #FFD4C2 ;
+             font-family: 'Indie Flower';
     }
+
+    h1{
+              font-family: 'Indie Flower';
+    }
+
 
 </style>
