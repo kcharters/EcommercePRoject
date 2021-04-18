@@ -6,7 +6,7 @@
 </template>
 
 <script>
-
+import { app, db } from "./firebase-config";
 
 export default {
 
