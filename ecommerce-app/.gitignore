@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
 /dist
-
+smart-bonus-292023-5b8b33a84326.json
 
 # local env files
 .env.local

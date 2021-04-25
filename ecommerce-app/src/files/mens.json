@@ -1,0 +1,145 @@
+ {
+        "menshoodies" : [ {
+          "description" : "Mens coffee themed printed hoodie ",
+          "id" : 1,
+          "name" : "Mens Hip-Hop Cat Coffee Hoodie",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H84f071af56824ffa93fdf6f2d6590a5dk/Morning-Cat-Hip-Hop-Coffee-Cat-Print-Mens-Clothes-Autumn-Oversized-Hoodie-Streetwear-Harajuku-Sweatshirt-Spring.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed pullover ",
+          "id" : 2,
+          "name" : "Mens Skellington Coffee Pullover",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Ha56224c0e9d44fc68715aa07fc29417fw/2021-Hot-Selling-Jack-Skellington-Coffee-Sweatshirt-Men-Nightmare-Before-Christmas-Male-Street-Clothing-Mens-Hipster.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 3,
+          "name" : "Mens Pug Coffee Hoodie",
+          "price" : 27.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hf83c2c138fc34c398a9711aba450df023/Pug-A-Coffee-Cute-Prints-Hoody-For-Men-2020-Japan-Anime-Crewneck-Streetwear-Cute-Crewneck-Hoodie.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 4,
+          "name" : "Mens Grumnpy Bear Coffee Hoodie",
+          "price" : 28.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H81a409ba15f44d28aa3d5e0ece51d8adI/I-Hate-Morning-People-And-Mornings-And-People-Hoodies-Funny-Bear-Drink-Coffee-Lover-Cute-Lazy.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 5,
+          "name" : "Mens First I Need Coffee Hoodie",
+          "price" : 30.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H0de05edb513a4e61ba45ad53f3ac2137J/Winter-Women-Harajuku-Hoodies-First-I-Need-Coffee-Letter-Sweatshirt-Camisa-Streetwear-Turtleneck-Cotton-Girls-Pullover.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 6,
+          "name" : "Mens Chill Panda Coffee Hoodie",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hcdc65624b72542cd89ffc0ed30a9ef72Y/Hoodie-Kawaii-Panda-Drinking-Coffee-Funny-Animal-Logo-Pullover-Men-Retro-Fashion-Hoody-Mens-Comfortable-Street.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 7,
+          "name" : "Mens Grumpy Coffee Cat Hoodie",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H2f18a5671adf434684f8a713808aa8f90/That-What-Tido-I-Drink-Coffee-Print-Hoodie-Skin-Friendly-Man-Hoody-Fleece-Warm-Autumn-Hoodies.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 8,
+          "name" : "Mens Skull Coffee Hoodie",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H97728830c646469b94464348794a9a7fu/Halloween-Coffee-Drinking-Skeleton-hoodie-long-sleeve-Halloween-Coffee-Drinking-Skeleton-Calavera-Day-Of-The-Dead.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 9,
+          "name" : "Mens Coffee is Universal Hoodie",
+          "price" : 30.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H5cfd5195b9d142d0976c4e514c3ce6cbU/Alien-Coffee-Is-Universal-Print-Streetwear-Hip-Hop-Harajuku-Men-Hoodie-Spring-Autumn-Fleece-Hoodies-Fashion.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : " Mens coffee themed printed hoodie ",
+          "id" : 10,
+          "name" : "Mens Karins Coffee Hoodie",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H534e6b59ec8447dd8ff895f1730af2367/2021-Spring-Autumn-Fleece-Hooded-Karin-s-Coffee-Cartoon-Funny-Hoodie-Men-Casual-Harajuku-Streetwear-Hip.jpg_640x640.jpg"
+        } ],
+        "menstshirts" : [ {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 1,
+          "name" : "Mens Coffee into Code Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hea1759454a5b419db8d32d8c550f9efaE/Science-Project-Programmer-IT-Men-Tshirt-I-Turn-Coffee-Into-Code-MasterCam-Program-Faddish-Breathable-Cotton.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 2,
+          "name" : "Mens IT freedom & coffee Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H504c54e22860460a86b0e2bede237734W/Mens-T-Shirts-Personalized-Gnu-Coffee-Freedom-Linux-T-Shirt-Vintage-Colors-Comic-T-Shirt-Round.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens tea themed printed tshirt ",
+          "id" : 3,
+          "name" : "Mens Tea-Rex Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H5d6bdbdae1e84f14833a0d4c12259d591/Men-s-T-Shirts-Tea-Rex-funny-dinosaur-drink-coffee-T-Shirts-Fashion-Casual-TShirt-High.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens colorful mushroom printed tshirt ",
+          "id" : 4,
+          "name" : "Mens Funky Mushroom Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H03a0865b1ae543b4b8b021ffaa5b863eq/2020FW-New-Mens-Designer-T-shirt-Italy-fashion-Tshirts-Summer-DSQ-Pattern-T-shirt-Male-Top.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 5,
+          "name" : "Mens Make Coffee Not War Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Ha71520a6e55d42a69f81590b03d8a140s/Make-Coffee-Not-War-T-Shirt-Geek-Nerd-Barista-Demonstration-Demo-Engineer-TEE-Shirt-Free-Style.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 6,
+          "name" : "Mens Sassy Sloth Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H7000e6e92f6049838568e48cdd6fb559c/Envmenst-100-Cotton-T-Shirt-Men-Clothing-Off-White-Touch-My-Coffee-i-Will-Slap-You.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 7,
+          "name" : "Mens Sloffee Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/HTB11khimRjTBKNjSZFDq6zVgVXaq/Sloffee-Prevailing-T-shirts-Sloth-Coffee-T-Shirt-Man-Funny-Tshirt-Black-Clothes-100-Cotton-Tops.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 8,
+          "name" : "Mens I'm Tired Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H80d56a5898414f9896e7cc71a0e2b3025/Mad-Max-T-shirt-Men-Coffee-Lover-Addict-T-Shirt-Funny-Morning-Drink-Tshirt-University-Trendy.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 9,
+          "name" : "Mens Anti-social Coffee Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hda8b6a70252b48abbd2176e977da22175/Men-Funny-T-Shirt-Fashion-tshirt-I-Like-Coffee-And-Maybe-4-People-Women-t-shirt.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Mens coffee themed printed tshirt ",
+          "id" : 10,
+          "name" : "Mens Coffee Cat printed Tshirt",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hc4d1910ecb134f05af074bd9d54a0159O/Funny-Morning-Coffee-Cat-Feline-Pet-Animal-Cartoon-Mens-T-Shirt-Tshirt-Tee-Top-Confortable-Tee.jpg_Q90.jpg_.webp"
+        } ]
+      }
+	  

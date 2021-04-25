@@ -1,0 +1,144 @@
+ {
+        "womenshoodies" : [ {
+          "description" : "Logo:Adulting is Hard Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 1,
+          "name" : "Sleepy Sloth Adulting is hard",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/He22671abc69443b9b50fd85ef14541dcg/Sloth-Hiding-In-Quilt-And-Coffee-Print-Hoody-Women-Street-Fashion-Hoodie-With-Hood-Women-S.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Logo:Give Me Coffee And No One Gets Hurt Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows",
+          "id" : 2,
+          "name" : "Give Me Coffee",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5da95187ae0de90c378895eb-7-large.jpg"
+        }, {
+          "description" : "Logo:Drink Coffee Like a Gilmore Girl Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows",
+          "id" : 3,
+          "name" : "I Drink Coffee Like a Gilmore Girl",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5cee35622f94ed707a9c1454-large.jpg?cache_buster=d8cc08a6aa24a0a66820d01af34a8166"
+        }, {
+          "description" : "Logo:Drink Epresso Patronum Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 4,
+          "name" : "Epresso Patronum Coffee Potter Cat",
+          "price" : 25.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5f97ae3fe00ba112af90d800-large.jpg?cache_buster=42da56bf2b262667bb4b39eeedf49e14"
+        }, {
+          "description" : "Logo:No Coffee No Workee Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 5,
+          "name" : "No Coffee No Workee",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5fe82e8115ebca7750952232-large.jpg?cache_buster=3bef215dd0621e42f6b57ab9d4a2bbae"
+        }, {
+          "description" : "Logo:Dunkin Donut Cup Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 6,
+          "name" : "Dunkin Donut Cup",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H443ac71efb0f45f283f78ccd34c4060e2/charli-damelio-merch-Sweatshirt-Men-Women-Print-Ice-Coffee-Splatter-Hoodies-Fashion-Hip-Hop-hoodie-Pullovers.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Logo:Energy = Milk x Coffee2 Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 7,
+          "name" : "E=mc2",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H2a3a68a1d60942ba9f7bcc6a13e5151dV/Hoodies-E-Mc-Coffee-Personality-Print-Hoody-For-Women-Harajuku-Aesthetic-Hoodie-Warm-Womens-Fleece-Oversized.jpg_Q90.jpg_.webp"
+        }, {
+          "description" : "Logo:Life Happens Coffee Helps Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 8,
+          "name" : "Life Happens Coffee Helps",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5dc4d25d1308fa0505812067-large.jpg?cache_buster=cfd47fc750b139b67fd1c346dbedb265"
+        }, {
+          "description" : "Logo: Coffee First  Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 9,
+          "name" : " Coffee First ",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5e0ee2fdc66841094527fae3-large.jpg?cache_buster=0ab5ea78a1abbfc3fa4d01ae4a334171"
+        }, {
+          "description" : "Logo:Coffee Or Die Collar:O-Neck Material: Cotton and Polyester Style: Fashion and Casual Color:As the picture shows ",
+          "id" : 10,
+          "name" : "Coffee Or Die",
+          "price" : 20.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/602096222a8eb6004e728273-large.jpg?cache_buster=5b9c73f7d4127c08609c950c3decc851"
+        } ],
+        "womenstshirts" : [ {
+          "description" : "Logo:COFFEE Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows ",
+          "id" : 1,
+          "name" : "Coffee Tshirt",
+          "price" : 10.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5f50987f48d333114692f831-2-large.jpg"
+        }, {
+          "description" : "Logo:COFFEE Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows ",
+          "id" : 2,
+          "name" : " Letter Print Coffee Tee",
+          "price" : 10.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5d0dd443357e9a0a0203546a-6-large.jpg"
+        }, {
+          "description" : " Logo:Don't Hurry Drink Coffee Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 3,
+          "name" : "Don't Hurry Drink Coffee",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5ef2c58a9c6ca7222d0d3c57-6-large.jpg"
+        }, {
+          "description" : " Logo:Give Me Coffee and No One Gets Hur Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 4,
+          "name" : "'Give Me Coffee",
+          "price" : 10.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/60472eee26ad1bc77d7d4509-large.jpg?cache_buster=5145d30b11971681e1a81ae1dec56de6"
+        }, {
+          "description" : " Logo:- Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 5,
+          "name" : "Coffee Heartbeat",
+          "price" : 10.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5ead6d08ef5f511208b62f0e-large.jpg?cache_buster=c1ed071cec50138b016ca90c71ea424d"
+        }, {
+          "description" : " Logo:Coffee Chaos and Cuss Words Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 6,
+          "name" : "Coffee Chaos and Cuss Words",
+          "price" : 10.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://canary.contestimg.wish.com/api/webimage/5be13a34e81b235b699f290c-5-large.jpg"
+        }, {
+          "description" : " Logo:- Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 7,
+          "name" : "Water colour Coffee",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H2feceef1885140df9180d440e23d5787o.jpg"
+        }, {
+          "description" : " Logo:- Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 8,
+          "name" : "Blue Winter Cozy Coffee",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/Hd7e2be1972ca4b44a866702f29d767c7r.jpg"
+        }, {
+          "description" : " Logo:Catppuccino Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 9,
+          "name" : "Catppuccino",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H0cfea3cbb4434386b0ee7240d9a07abei.jpg"
+        }, {
+          "description" : " Logo:I need Coffee Material:95% polyester 5% spandex Style:Fashion and Casual Color:As the picture shows  ",
+          "id" : 10,
+          "name" : "I need coffee",
+          "price" : 15.0,
+          "size" : [ "small", "medium", "large", "Xlarge" ],
+          "url" : "https://ae01.alicdn.com/kf/H66b10eefcdcf48f59b1739f3d3f02a2cX/Women-Cat-Coffee-Paw-Strawberry-Cute-Cartoon-Short-Sleeve-Summer-Lady-Tops-T-Shirt-Shirt-Womens.jpg_640x640.jpg"
+        } ]
+      }
