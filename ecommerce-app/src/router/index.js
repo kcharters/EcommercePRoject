@@ -41,7 +41,7 @@ const routes = [
 
       },
       {
-        path: "productsedit",
+        path: "productsedit/:id",
         name: "productsedit",
         component: ProductsEdit,
         meta:{keepAlive:true}
