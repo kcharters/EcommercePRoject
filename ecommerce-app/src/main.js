@@ -11,7 +11,7 @@ import './assets/styles.scss';
 
 import{ init } from 'emailjs-com';
 init("user_psNoZ84QoMJgDzqhblmjK");
-import Vuelidate from 'vuelidate'
+import Vuelidate from 'vuelidate';
 import store from './store/index.js';
 import { rtdbPlugin } from 'vuefire';
 
