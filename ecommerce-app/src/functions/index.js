@@ -1,3 +1,4 @@
+//supposed to be for admin auth page 
 import { auth, https } from 'firebase-functions';
 import { initializeApp, firestore, auth as _auth } from 'firebase-admin';
 
