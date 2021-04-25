@@ -2,9 +2,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import AdminLogin from "../components/AdminLogin.vue";
-import Admin from "../views/Admin.vue"
-import Products from "../components/Products.vue";
+import AdminLogin from "../components/admin/AdminLogin.vue";
+import Admin from "../components/admin/Admin.vue"
+import ProductsCreate from "../components/admin/ProductsCreate.vue"
+import ProductsEdit from "../components/admin/ProductsEdit.vue"
+import ProductsList from "../components/admin/ProductsList.vue"
 
 import firebase from 'firebase/app';
 import "firebase/auth";
@@ -16,11 +18,12 @@ const routes = [
     name: "Home",
     component: Home
   },
-  {
-    path: "/admin",
-    name: "adminLogin",
-    component: AdminLogin,
-  },
+  // {
+    //still working on admin specific login
+  //   path: "/admin",
+  //   name: "adminLogin",
+  //   component: AdminLogin,
+  // },
   {
     path: "/admin",
     name: "admin",
@@ -31,9 +34,23 @@ const routes = [
      },
      children:[
       {
-        path: "products",
-        name: "products",
-        component: Products
+        path: "productslist",
+       name:"productslist",
+        component: ProductsList,
+        meta:{keepAlive:true}
+
+      },
+      {
+        path: "productsedit",
+        name: "productsedit",
+        component: ProductsEdit,
+        meta:{keepAlive:true}
+      },
+      {
+        path: "productscreate",
+       name:"productscreate",
+        component: ProductsCreate,
+        meta:{keepAlive:true}
       },
     ]     
   },
@@ -86,18 +103,16 @@ router.beforeEach(async (to, from, next) => {
           claims
         }) {
           if (claims.customer) {
-
+            if (to.path !== '/customer')
+            return next({
+              path: '/customer',
+            })
           } else if (claims.admin) {
             if (to.path !== '/admin')
               return next({
                 path: '/admin',
               })
-          } else if (claims.driver) {
-            if (to.path !== '/driver')
-              return next({
-                path: '/driver',
-              })
-          }
+          } 
         })
     } else {
       if (to.matched.some(record => record.meta.auth)) {

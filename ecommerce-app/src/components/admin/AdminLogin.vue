@@ -41,38 +41,34 @@ export default {
     data() {
         return {
             email: "",
-            password: ""
+            password: "",
+            adminID: process.env.VUE_APP_ADMINID,
+            admindata:""
         };
     },
 
     created() {
-        firebase.auth().onAuthStateChanged(userAuth => {
-            if (userAuth) {
-                firebase
-                    .auth()
-                    .currentUser.getIdTokenResult()
-                    .then(tokenResult => {
-                        console.log(tokenResult.claims);
-                    });
-            }
-        });
+     this.__created();
     },
 
     methods: {
-        async loginButtonPressed() {
-            try {
-                const {
-                    user
-                } = await firebase
+        __created(){
+  
+
+        },
+         loginButtonPressed() {    
+ 
+           if(adminUser.user_id == adminid){
+            firebase
                     .auth()
                     .signInWithEmailAndPassword(this.email, this.password)
                      .then(() => {
                  this.$router.replace({ name: "admin" });
             });
-                    
-            } catch (error) {
-                console.log(error);
             }
+           else{
+               alert("You do not have permission to access the admin panel, if you are admin please signin on the main site otherwise contact your server admin")
+           }
         }
     }
 };

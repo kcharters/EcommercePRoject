@@ -1,11 +1,15 @@
+//firebase config in its own file
 import Vue from "vue";
 import firebase from 'firebase/app';
 import "firebase/auth";
 import "firebase/database";
+import 'firebase/firestore'
 import store from './store/index.js';
 
 import { rtdbPlugin } from 'vuefire';
+import { firestorePlugin } from 'vuefire'
 
+Vue.use(firestorePlugin)
 Vue.use(rtdbPlugin);
 
 export let firebaseConfig = {
@@ -20,6 +24,7 @@ export let firebaseConfig = {
 
   
 let app = firebase.initializeApp(firebaseConfig);
+let fsdb = firebase.firestore();
 let db = firebase.database();
 let productsRef = db.ref("products");  
   firebase.auth().onAuthStateChanged(user => {
@@ -34,4 +39,4 @@ let productsRef = db.ref("products");
         }, reject);
     })
   };
-  export { app, db, productsRef};
+  export { app, db, productsRef, fsdb};

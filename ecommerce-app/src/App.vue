@@ -1,12 +1,14 @@
 <template>
    <div id="app">
+
     <router-view></router-view>
+
   </div>
 
 </template>
 
 <script>
-import { app, db } from "./firebase-config";
+
 
 export default {
 
