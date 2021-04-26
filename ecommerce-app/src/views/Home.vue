@@ -35,7 +35,7 @@ export default {
     }
 };
 </script>
-<style scoped lang="scss" >
+<style  lang="scss" >
 .home{
   background-color: #2f6690 ;
       font-family: 'Indie Flower';
