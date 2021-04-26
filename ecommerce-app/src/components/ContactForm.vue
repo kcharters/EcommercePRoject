@@ -321,6 +321,7 @@ label {
 }
 
 .contact-form {
+  font-size: 18px;
   flex-basis: 60%;
   padding: 40px 60px;
 }
