@@ -28,6 +28,13 @@ Vue.component('NavBar',require('./components/NavBar.vue').default);
 Vue.component('ContactForm',require('./components/ContactForm.vue').default);
 Vue.component('Hero',require('./components/Hero.vue').default);
 Vue.component('products',require('./sections/products.vue').default);
+Vue.component('Pins',require('./components/Pins.vue').default);
+Vue.component('Stickers',require('./components/Stickers.vue').default);
+Vue.component('Totes',require('./components/Totes.vue').default);
+Vue.component('Mugs',require('./components/Mugs.vue').default);
+Vue.component('Hoodies',require('./components/Hoodies.vue').default);
+Vue.component('Tshirts',require('./components/Tshirts.vue').default);
+
 
 
 new Vue({

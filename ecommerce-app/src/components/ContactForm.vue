@@ -312,8 +312,8 @@ label {
   font-weight: bold;
 }
 .container {
-  width: 80%;
-  margin: 50px auto;
+  width: 100%;
+  margin: 10px auto;
 }
 .contact-container {
   border-radius: 25px;
@@ -321,23 +321,28 @@ label {
 }
 
 .contact-form {
-  font-size: 18px;
-  flex-basis: 60%;
+  font-size: 16px;
+  flex-basis: 100%;
   padding: 40px 60px;
+  height: auto;
 }
 .contact-form h3 {
   margin-bottom: 40px;
 }
 .contact-info {
+  margin-top:45px;
   flex-basis: 40%;
   padding: 40px;
   background-color: lightgrey;
   border-radius: 25px;
+  height: auto;
+  margin: auto;
+    font-size: 16px;
+     font-weight: bold;
+     color: black;
+
 }
 
-.container h1 {
-  margin-bottom: 15px;
-}
 
 .input-row {
   display: flex;
@@ -345,7 +350,7 @@ label {
   margin-bottom: 20px;
 }
 .input-row .input-group {
-  flex-basis: 45%;
+  flex-basis: 100%;
 }
 
 textarea {
@@ -374,6 +379,7 @@ tr td {
 }
 .contact-info h3 {
   margin-bottom: 40px;
+  color: black;
 }
 
 #message input {
