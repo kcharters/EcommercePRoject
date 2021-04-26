@@ -2,7 +2,11 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Admin from "../views/Admin.vue";
+import AdminLogin from "../components/admin/AdminLogin.vue";
+import Admin from "../components/admin/Admin.vue"
+import ProductsCreate from "../components/admin/ProductsCreate.vue"
+import ProductsEdit from "../components/admin/ProductsEdit.vue"
+import ProductsList from "../components/admin/ProductsList.vue"
 
 import firebase from 'firebase/app';
 import "firebase/auth";
@@ -14,11 +18,43 @@ const routes = [
     name: "Home",
     component: Home
   },
+  // {
+    //still working on admin specific login
+  //   path: "/admin",
+  //   name: "adminLogin",
+  //   component: AdminLogin,
+  // },
   {
     path: "/admin",
     name: "admin",
-    component: Admin
+    component: Admin,
+      //to require auth from a page
+    meta:{
+      requiresAuth: true
+     },
+     children:[
+      {
+        path: "productslist",
+       name:"productslist",
+        component: ProductsList,
+        meta:{keepAlive:true}
+
+      },
+      {
+        path: "productsedit/:id",
+        name: "productsedit",
+        component: ProductsEdit,
+        meta:{keepAlive:true}
+      },
+      {
+        path: "productscreate",
+       name:"productscreate",
+        component: ProductsCreate,
+        meta:{keepAlive:true}
+      },
+    ]     
   },
+  
   {
     path: "/ourCompany",
     name: "OurCompany",
@@ -37,11 +73,7 @@ const routes = [
 
   {
     path: "/shop",
-    name: "Shop",
-    //to require auth from a page
-    meta:{
-      requiresAuth: true
-     },
+    name: "Shop",     
     component: () =>
       import(/* webpackChunkName: "" */ "../views/Shop.vue")
 
@@ -64,11 +96,37 @@ const router = new VueRouter({
   routes
 });
 router.beforeEach(async (to, from, next) => {
-  const requiresAuth = to.matched.some(record => record.meta.requiresAuth);
-  if (requiresAuth && !await firebase.getCurrentUser()){
-    next('SignUp');
-  }else{
-    next();
-  }
+  firebase.auth().onAuthStateChanged(userAuth => {
+    if (userAuth) {
+      firebase.auth().currentUser.getIdTokenResult()
+        .then(function ({
+          claims
+        }) {
+          if (claims.customer) {
+            if (to.path !== '/customer')
+            return next({
+              path: '/customer',
+            })
+          } else if (claims.admin) {
+            if (to.path !== '/admin')
+              return next({
+                path: '/admin',
+              })
+          } 
+        })
+    } else {
+      if (to.matched.some(record => record.meta.auth)) {
+        next({
+          path: '/login',
+          query: {
+            redirect: to.fullPath
+          }
+        })
+      } else {
+        next()
+      }
+    }
+  })
+  next()
 });
 export default router;
