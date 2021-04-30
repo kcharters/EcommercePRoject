@@ -1,77 +1,102 @@
 <template>
- <!-- page-content  -->
-      <main class="page-content pt-2">
-    
-        <div class="container-fluid p-5">
-          <div class="row">
-            <div class="form-group col-md-12">
-              <h2>Producst</h2>
-         
+  <div>
+   <h2>Products</h2>
                 <div class="col-md-12">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Description</th>
-                        <th>Price</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="product in products" :key="product.key">
-                        <td>{{ product.name }}</td>
-                        <td>{{ product.email }}</td>
-                        <td>{{ product.phone }}</td>
-                        <td>
-                            <router-link :to="{name: 'edit', params: { id: product.key }}" class="btn btn-primary">Edit
-                            </router-link>
-                            <button @click.prevent="deleteproduct(product.key)" class="btn btn-danger">Delete</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-          
-            </div>
+             <div id="dynamic-component-demo" class="demo">
+      <button
+        v-for="tab in tabs"
+        v-bind:key="tab.name"
+        v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
+        v-on:click="currentTab = tab" 
+        class="btn btn-info"
+      >
+        {{ tab.name }}
+      </button>
 
-   </div>
+      <component v-bind:is="currentTab.component" class="tab"></component>
+      <router-view :key="$route.fullPath"></router-view>
+            
+      
+    </div> 
+         
         </div>
-      </main>
-      <!-- page-content" -->
+  </div>
 </template>
 <script>
+import pins from "../products/pins.vue"
+import stickers from "../products/stickers.vue"
+import mugs from "../products/mugs.vue"
+import tote from "../products/tote.vue"
+import menstshirts from "../products/menstshirts.vue"
+import menshoodies from "../products/menshoodies.vue"
+import womenstshirts from "../products/womenstshirts.vue"
+import womenshoodies from "../products/womenshoodies.vue"
+var  tabs = [
+        {
+          name: "Pins",
+          component: pins
+        },
+        {
+          name: "Mugs",
+          component: mugs
+        },
+        {
+          name: "Tote",
+          component: tote
+        },
+        {
+          name: "Stickers",
+          component: stickers
+        },
+        {
+          name: "Mens Hoodies",
+          component: menshoodies
+        },
+        {
+          name: "Mens tshirts",
+          component: menstshirts
+        },
+         {
+          name: "Womens Hoodies",
+          component: womenshoodies
+        },
+        {
+          name: "Womens tshirts",
+          component: womenstshirts
 
-import {fsdb} from '@/firebase-config.js'
+        }
+      ]
+
 
 export default {
   data(){
     return{
-      products:[]
+      tabs: tabs,
+          currentTab: tabs[0]
+    
     }
   },
    mounted() {
-   
+  
   },
   created(){
-fsdb.collection('products').onSnapshot((snapshotChange) => {
-  this.products = [];
-  snapshotChange.forEach(doc => {
-    this.products.push({
-      key:doc.id,
-      name: doc.data().name,
-      description: doc.data().description,
-      price: doc.data().price
-    })
-  });
-})
-  },
+     
+    },
+    
+  
   methods:{
 
   }
    
 }
 </script>
+<style scoped>
+section{
+  float: left;
+}
 
-<style lang="sass" scoped>
+*{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+}
 
 </style>

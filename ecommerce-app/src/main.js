@@ -15,6 +15,10 @@ import Vuelidate from 'vuelidate';
 import store from './store/index.js';
 import { rtdbPlugin } from 'vuefire';
 
+import Element from 'element-ui'
+
+Vue.use(Element)
+
 import VueSimpleAccordion from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
 

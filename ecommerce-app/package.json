@@ -12,6 +12,7 @@
     "@popperjs/core": "^2.9.1",
     "bootstrap": "^4.6.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.1",
     "emailjs-com": "^2.6.4",
     "firebase": "^7.24.0",
     "firebase-admin": "^9.6.0",

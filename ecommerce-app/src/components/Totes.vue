@@ -32,10 +32,6 @@
       </div>
      </div>
      </div>
- 
-   
-
- 
 </template>
 <script>
 import { productsRef } from "../firebase-config.js";
