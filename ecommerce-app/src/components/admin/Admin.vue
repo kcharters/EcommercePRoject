@@ -78,13 +78,25 @@
                       <span class="menu-text">Dashboard</span>
                     </a>
                   </li>
+  <li class="sidebar-dropdown" >
+                            <a @click="dropdownMenu">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="menu-text">E-commerce</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                         <router-link to="/admin/productslist">Products  </router-link>
 
-                  <li class="sidebar-dropdown">
-                    <router-link to="/admin/productslist">
-                      <i class="fa fa-shopping-cart"></i>
-                      <span class="menu-text">Products</span>
-                    </router-link>
-                  </li>
+                                    </li>
+                                    <li>
+                                        <a >Add new Products</a>
+                                    </li>
+                                   
+                                </ul>
+                            </div>
+                        </li>
+                     
                 </ul>
               </div>
               <!-- sidebar-menu  -->
@@ -152,6 +164,13 @@ export default {
     toggleSidebar() {
       $(".page-wrapper").toggleClass("toggled");
     },
+    dropdownMenu(){
+ 
+
+$('.sidebar-submenu').slideToggle(400)
+
+
+    },
     signout() {
       firebase
         .auth()
@@ -182,7 +201,7 @@ section {
 
 span,
 h2,
-small {
+small,a,li {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
 }
 </style>

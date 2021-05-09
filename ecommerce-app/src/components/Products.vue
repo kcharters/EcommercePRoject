@@ -33,7 +33,7 @@
 
 <script>
 import { productsRef } from "../firebase-config.js";
-
+import firebase from "../firebase-config.js"
 export default {
   name: "Products",
   data: function () {
@@ -44,7 +44,7 @@ export default {
   firebase: {
     products: productsRef,
   },
-  created() {},
+
   computed: {
     mappedTest() {
       //this maps over the keys in the json file so we can pick out the products 
