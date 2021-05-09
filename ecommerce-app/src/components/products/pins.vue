@@ -58,7 +58,17 @@ export default {
       log(msg) {
       console.log(msg);
     },
-    
+     deletepin(id){
+              if (window.confirm("Do you really want to delete?")) {
+                fsdb.collection("pins").doc(id).delete().then(() => {
+                    console.log("Document deleted!");
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+              }
+            }
+        
   }
 }
 </script>

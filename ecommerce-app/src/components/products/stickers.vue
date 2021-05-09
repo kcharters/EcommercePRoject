@@ -58,7 +58,16 @@ export default {
       log(msg) {
       console.log(msg);
     },
-    
+      deletesticker(id){
+              if (window.confirm("Do you really want to delete?")) {
+                fsdb.collection("stickers").doc(id).delete().then(() => {
+                    console.log("Document deleted!");
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+              }
+            }
   }
 }
 </script>

@@ -90,7 +90,7 @@
 
                                     </li>
                                     <li>
-                                        <a >Add new Products</a>
+                                        <router-link to="/admin/productscreate">Add new Products</router-link>
                                     </li>
                                    
                                 </ul>

@@ -1,7 +1,7 @@
 <template>
   <div>
       <h2>
-        Edit item
+        Add item
         
       </h2>
         <form @submit="onSubmit" id="abc">
@@ -22,7 +22,7 @@
                     <label>Price</label>
             <input id="author" class="form-control col-md-6" v-model.trim="item.price"/>
           </div>
-          <button type="submit" class="btn btn-primary" variant="primary">Update</button>
+          <button type="submit" class="btn btn-primary" variant="primary">Add</button>
           
         </form>
       </div>
@@ -30,40 +30,29 @@
 </template>
 <script>
 import firebase from "firebase/app"
-
+import {fsdb} from '@/firebase-config.js'
 export default {
    name: 'Edititem',
   data () {
     return {
-      key: this.$route.params.id,
+      key: this.$route.params.uid,
       item: {}
     }
   },
   created () {
-    const ref = firebase.firestore().collection('pins').doc(this.$route.params.id);
-    ref.get().then((doc) => {
-      if (doc.exists) {
-        this.item = doc.data();
-      } else {
-        alert("No such document!");
-      }
-    });
+  
   },
   methods: {
     onSubmit (evt) {
       evt.preventDefault()
-      const updateRef = firebase.firestore().collection('pins').doc(this.$route.params.id);
-      updateRef.set(this.item).then((docRef) => {
-         this.key = ''
-        this.item.name = ''
-        this.item.description = ''
-        this.item.price = ''
-       alert("Item Updated!")
-       parent.document.getElementById("abc").reload();
-      })
-      .catch((error) => {
-        alert("Error adding document: ", error);
-      });
+      fsdb.collection('pins').add(this.item).then(() => {
+                    alert("item successfully created!");
+                    this.item.name = ''
+                    this.item.description = ''
+                    this.item.price = ''
+                }).catch((error) => {
+                    console.log(error);
+                });
     }
   }  
 }
