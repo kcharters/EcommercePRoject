@@ -6,6 +6,7 @@ import "firebase/database";
 import 'firebase/firestore'
 import store from './store/index.js';
 
+
 import { rtdbPlugin } from 'vuefire';
 import { firestorePlugin } from 'vuefire'
 
@@ -22,7 +23,7 @@ export let firebaseConfig = {
     appId: process.env.VUE_APP_FIREBASE_APP_ID,
   };
 
-  
+
 let app = firebase.initializeApp(firebaseConfig);
 let fsdb = firebase.firestore();
 let db = firebase.database();

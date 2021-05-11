@@ -38,6 +38,9 @@
               <p class="nav-link" data-toggle="modal" data-target="#signupmodal">Register</p>
             </li>
           </template>
+          <li class="nav-item" id="adminlink" >
+        <router-link to="/admin" class="nav-link"> Admin </router-link>
+      </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -56,18 +59,32 @@ import { mapGetters } from "vuex";
 import firebase from "firebase";
 export default {
   name: "NavBar",
-  props: {
-    msg: String
+  data(){
+    return{
+    
+    };
   },
-  
-  computed: {
+  props: {
+    msg: String,
+    
+  },
+   computed: {
+
     ...mapGetters({
 // map `this.user` to `this.$store.getters.user`
       user: "user"
     })
   },
+ mounted(){
+          let user = firebase.auth().currentUser;
+          let uid = user.uid;
+          let adminlink = document.getElementById('adminlink')
+          if (uid == process.env.VUE_APP_ADMIN){
+           adminlink.style.display = 'block';
+          } 
+        
+ },
   methods: {
-    
     signOut() {
       firebase
         .auth()
@@ -76,16 +93,21 @@ export default {
           this.$router.replace({
             name: "Home"
           });
+
         });
     }
   } 
 
 };
+
 </script>
 
 <style scoped lang="scss">
 .nav-item{
   color:black;
   font-size: 16pt;
+}
+#adminlink{
+  display: none;
 }
 </style>
