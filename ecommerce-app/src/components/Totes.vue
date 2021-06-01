@@ -23,7 +23,13 @@
               {{ totebag.description }}
               </p>
               <p class="card-subtitle mb-2 text-muted">${{ totebag.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                 <add-to-cart 
+              :product-id="totebag.id"
+              :name="totebag.name"
+              :description="totebag.description"
+              :price="totebag.price"
+              :product-image="totebag.url" 
+              ></add-to-cart>
             </div>
           </div>
         </div>

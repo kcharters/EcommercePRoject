@@ -28,7 +28,11 @@
     <h1>Tshirts</h1>
     <hr>
     <Tshirts></Tshirts>
+    
+<AddToCartModal></AddToCartModal>
   </div>
+
+  
 </template>
 
 <script>
