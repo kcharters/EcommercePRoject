@@ -23,7 +23,13 @@
               {{ tshirts.description }}
               </p>
               <p class="card-subtitle mb-2 text-muted">${{ tshirts.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+                      <add-to-cart 
+              :product-id="tshirts.id"
+              :name="tshirts.name"
+              :description="tshirts.description"
+              :price="tshirts.price"
+              :product-image="tshirts.url" 
+              ></add-to-cart>
             </div>
           </div>
         </div>

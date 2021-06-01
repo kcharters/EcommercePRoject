@@ -18,19 +18,23 @@
           </div>
         </div>
       </div>
+
+    
        <LoginModal></LoginModal>
       <SignUpModal></SignUpModal>
   </div>
 </template>
 
 <script>
+
 import LoginModal from '../components/LoginModal.vue';
 import SignUpModal from '../components/SignUpModal.vue';
 export default {
     name: "Home",
     components:{
       SignUpModal,
-      LoginModal
+      LoginModal,
+
 
     }
 };

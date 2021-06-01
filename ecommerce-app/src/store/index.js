@@ -10,6 +10,7 @@ export default new Vuex.Store({
       loggedIn: false, //if user is authenticated or not
       data: null //holds info about the loggedin user
     },
+    cart:[],
     
   },
   getters: {
@@ -19,6 +20,20 @@ export default new Vuex.Store({
     
   },
   mutations: {
+
+    addToCart(state, item){
+      let found = state.cart.find(product => product.productName == item.productName)
+      
+      if(found){
+        found.productQuantity++;
+
+
+      }else{
+        state.cart.push(item);
+      }
+     
+    },
+
     //sets the loggedIn property on state.user to the valuse we passed to it
     SET_LOGGED_IN(state, value) {
       state.user.loggedIn = value;

@@ -24,7 +24,13 @@
               {{ stickers.description }}
               </p>
               <p class="card-subtitle mb-2 text-muted">${{ stickers.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <add-to-cart 
+              :product-id="stickers.id"
+              :name="stickers.name"
+              :description="stickers.description"
+              :price="stickers.price"
+              :product-image="stickers.url" 
+              ></add-to-cart>
             </div>
           </div>
         </div>
