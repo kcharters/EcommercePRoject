@@ -42,10 +42,7 @@
         <router-link to="/admin" class="nav-link"> Admin </router-link>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-info mr-4" type="submit">Search</button>
-    </form>
+    <router-link to="/search"> <button class="btn btn-info mr-4" type="submit">Search</button></router-link>
   </div>
 
 </nav>

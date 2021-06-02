@@ -21,12 +21,14 @@ Vue.use(Element)
 
 import VueSimpleAccordion from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
-
+import InstantSearch from 'vue-instantsearch';
 
 Vue.use(VueSimpleAccordion);
 Vue.use(rtdbPlugin);
 Vue.config.productionTip = false;
 Vue.use(Vuelidate);
+
+Vue.use(InstantSearch);
 
 Vue.component('NavBar',require('./components/NavBar.vue').default);
 Vue.component('ContactForm',require('./components/ContactForm.vue').default);
