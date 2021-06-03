@@ -16,6 +16,8 @@ import StickersEdit from "../components/edit/editstickers.vue"
 import ToteEdit from "../components/edit/edittote.vue"
 import PinEdit from "../components/edit/editpins.vue"
 
+import Search from "../components/Search.vue"
+
 import firebase from 'firebase/app';
 import "firebase/auth";
 Vue.use(VueRouter);
@@ -133,6 +135,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "" */ "../views/ContactUs.vue")
+  },
+  {
+    path: "/search",
+    name: "Search",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "" */ "../views/Search.vue")
   },
 ];
 

@@ -9,6 +9,10 @@ window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
 
+import 'instantsearch.css/themes/reset.css';
+
+import 'instantsearch.css/themes/satellite.css';
+
 import{ init } from 'emailjs-com';
 init("user_psNoZ84QoMJgDzqhblmjK");
 import Vuelidate from 'vuelidate';
@@ -21,20 +25,22 @@ Vue.use(Element)
 
 import VueSimpleAccordion from 'vue-simple-accordion';
 import 'vue-simple-accordion/dist/vue-simple-accordion.css';
+
+import InstantSearch from 'vue-instantsearch';
+
 import Vuex from 'vuex';
 Vue.use(Vuex);
-
-
-
-
 
 Vue.use(VueSimpleAccordion);
 Vue.use(rtdbPlugin);
 Vue.config.productionTip = false;
 Vue.use(Vuelidate);
 
+Vue.use(InstantSearch);
+
 Vue.component('AddToCartModal',require('./components/AddToCartModal.vue').default);
 Vue.component('add-to-cart',require('./components/AddToCart.vue').default);
+
 Vue.component('NavBar',require('./components/NavBar.vue').default);
 Vue.component('ContactForm',require('./components/ContactForm.vue').default);
 Vue.component('Hero',require('./components/Hero.vue').default);
