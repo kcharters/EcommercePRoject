@@ -9,6 +9,10 @@ window.$ = window.jQuery = jQuery;
 import 'bootstrap';
 import './assets/styles.scss';
 
+import 'instantsearch.css/themes/reset.css';
+
+import 'instantsearch.css/themes/satellite.css';
+
 import{ init } from 'emailjs-com';
 init("user_psNoZ84QoMJgDzqhblmjK");
 import Vuelidate from 'vuelidate';

@@ -1,49 +1,39 @@
 <template>
-
+<div class="container">
    <ais-instant-search
      index-name="ecommerce_app"
   :search-client="searchClient"
   >
+ 
 <ais-search-box>
-  <div slot-scope="{ currentRefinement, isSearchStalled, refine }">
-    <input
-      type="search"
-      :value="currentRefinement"
-      @input="refine($event.currentTarget.value)"
-    >
-    <span :hidden="!isSearchStalled">Loading...</span>
-  </div>
+  
 </ais-search-box>
-
+<ais-sort-by
+  :items="[
+    { value: 'ecommerce_app', label: 'Featured' },
+    { value: 'ecommerce_app_price_asc', label: 'Price asc.' },
+    { value: 'ecommerce_app_price_desc', label: 'Price desc.' },
+  ]"
+/>
+ 
+<div class="container">
 <div class="ais-Hits">
   <ais-infinite-hits >
-      <ul slot-scope="{
-    items,
-    refinePrevious,
-    refineNext,
-    isLastPage,
-    
-  }">
-    <li>
-      <button @click="refinePrevious">
-        Show previous results
-      </button>
-    </li>
-    <li v-for="item in items" :key="item.objectID" class="ais-Hits-item">
-     
-    {{item.name}}  + {{item.description}} 
-    <img :src="item.url"/>  
-    </li>
-    <li v-if="!isLastPage">
-      <button @click="refineNext">
-        Show more results
-      </button>
-    </li>
-  </ul>
-  </ais-infinite-hits> 
+  <ais-InfiniteHits-item slot="item" slot-scope="{ item}">
+    <div class="panel">
+    <strong>Name:</strong>{{ item.name }} <br/>
+    <strong>Price </strong> ${{ item.price}} <br/>
+    <strong>Decription</strong> {{item.description}}
+    </div> 
+    <div class="panel">
+      <img :src="item.url"/> 
+    </div>
+  </ais-InfiniteHits-item>
+</ais-infinite-hits>
 </div>   
+</div>
    </ais-instant-search>
- 
+</div>
 </template>
 
 <script>
@@ -58,6 +48,14 @@
         ),
       };
     },
+    methods: {
+      transformItems(items) {
+        return items.map(item => ({
+          ...item,
+          label: item.label.toUpperCase(),
+        }));
+      },
+    },
   };
 </script>
 <style lang="scss" scoped>
@@ -70,8 +68,24 @@ ul{
 img{
     height: 200px;
     width:200px;
+    float: right;
 }
 input{
     font-family: Arial, Helvetica, sans-serif !important;
+}
+.container{
+  padding: 20px;
+  padding-left: 100px;
+}
+.panel{
+ margin: auto 0;
+ width: 300px;
+ height: 200px;
+ float: left;
+ 
+}
+.panel2{
+  width: 75%;
+float: left ;
 }
 </style>
