@@ -14,7 +14,7 @@
        
       
           <div class="card" style="width: 18rem; margin-left: 20px; ">
-         
+    
        
             <img :src="hoodies.url" class="card-img-top" alt="..." width="100" height="250"/>
             <div class="card-body">
@@ -22,8 +22,15 @@
               <p class="card-subtitle mb-2 text-muted">
               {{ hoodies.description }}
               </p>
-              <p class="card-subtitle mb-2 text-muted">${{ hoodies.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <p class="card-subtitle mb-2 text-muted"> ${{ hoodies.price }}</p>
+              <add-to-cart 
+              :product-id="hoodies.id"
+              :name="hoodies.name"
+              :description="hoodies.description"
+              :price="hoodies.price"
+              :product-image="hoodies.url"
+              
+              ></add-to-cart>
             </div>
           </div>
         </div>
@@ -31,6 +38,7 @@
       </div>
       </div>
      </div>
+     
      </div>
  
    

@@ -23,7 +23,14 @@
               {{ mugs.description }}
               </p>
               <p class="card-subtitle mb-2 text-muted">${{ mugs.price }}</p>
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+              <add-to-cart 
+              
+              :product-id="mugs.id"
+              :name="mugs.name"
+              :description="mugs.description"
+              :price="mugs.price"
+              :product-image="mugs.url" 
+              ></add-to-cart>
             </div>
           </div>
         </div>
