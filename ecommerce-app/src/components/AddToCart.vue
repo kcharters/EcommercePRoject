@@ -40,4 +40,4 @@ addToCart(){
 };
 </script>
 
-<style></style>
+<style scoped></style>

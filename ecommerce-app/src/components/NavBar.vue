@@ -31,18 +31,18 @@
           </template>
           <template v-else>
             <li class="nav-item">
-              <p class="nav-link" data-toggle="modal" data-target="#loginmodal">Login</p>
+              <a class="nav-link" data-toggle="modal" data-target="#loginmodal">Login</a>
               <!--dont use router link when using modal-->
             </li>
             <li class="nav-item">
-              <p class="nav-link" data-toggle="modal" data-target="#signupmodal">Register</p>
+              <a class="nav-link" data-toggle="modal" data-target="#signupmodal">Register</a>
             </li>
           </template>
           <li class="nav-item" id="adminlink" >
         <router-link to="/admin" class="nav-link"> Admin </router-link>
       </li>
     </ul>
-    <router-link to="/search"> <button class="btn btn-info mr-4" type="submit">Search</button></router-link>
+    <router-link to="/search"> <button class="btn btn-secondary btn-info mr-4" type="submit">Search</button></router-link>
   </div>
 
 </nav>

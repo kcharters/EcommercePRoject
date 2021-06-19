@@ -23,7 +23,7 @@
             <input id="author" class="form-control col-md-6" v-model.trim="item.price"/>
           </div>
           <button type="submit" class="btn btn-primary" variant="primary">Update</button>
-          
+          <button class="btn btn-danger mr-4" @click="remove">Cancel</button>
         </form>
       </div>
      
@@ -59,12 +59,13 @@ export default {
         this.item.description = ''
         this.item.price = ''
        alert("Item Updated!")
-       parent.document.getElementById("abc").reload();
-      })
-      .catch((error) => {
-        alert("Error adding document: ", error);
+        this.$router.push({name: "productslist"})
       });
+    },
+    remove(){
+         this.$router.replace({ name: "productslist" });
     }
+
   }  
 }
 </script>
@@ -76,9 +77,6 @@ section{
 .form-control{
    margin: 0 auto;
     float: none;
-}
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 </style>

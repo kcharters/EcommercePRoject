@@ -73,7 +73,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
  .card-columns {
     column-count: 4;
     
@@ -82,6 +82,12 @@ export default {
 
 .card{
  margin:10px;
-
+ font-size: 12px;
+min-height: 500px;
+width: 18rem; margin-left: 20px; 
+}
+.card-img-top{
+width:250px; 
+height:200px;
 }
 </style>

@@ -2,6 +2,8 @@
   <div>
    <h2>Products</h2>
                 <div class="col-md-12">
+                  
+                  <br/>
              <div id="dynamic-component-demo" class="demo">
       <button
         v-for="tab in tabs"
@@ -12,14 +14,9 @@
       >
         {{ tab.name }}
       </button>
-
-      <component v-bind:is="currentTab.component" class="tab"></component>
-      <router-view :key="$route.fullPath"></router-view>
-            
-      
-    </div> 
-         
-        </div>
+<component v-bind:is="currentTab.component" class="tab"></component>
+</div> 
+</div>
   </div>
 </template>
 <script>
@@ -73,7 +70,6 @@ export default {
     return{
       tabs: tabs,
           currentTab: tabs[0]
-    
     }
   },
    mounted() {
@@ -93,10 +89,6 @@ export default {
 <style scoped>
 section{
   float: left;
-}
-
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
 }
 
 </style>

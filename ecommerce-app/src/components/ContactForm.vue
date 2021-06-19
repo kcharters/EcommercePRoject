@@ -3,9 +3,9 @@
     <div class="container">
       <h1>Contact Us</h1>
       <div class="contact-container">
-        <div>
+        <div class="">
           <h3>Send your questions here</h3>
-          <form id="contact-form" class="contact-form"  @sumbit.prevent="submitForm"> 
+          <form id="contact-form" class="form-group"  @sumbit.prevent="submitForm"> 
             <div class="form-row">
               <input type="hidden" name="contact_number">
               <div class="form-group col-md-12">
@@ -123,7 +123,7 @@
                   </span>
                 </div>
               </div>
-              <button type="submit" class="btn btn-success"> Submit {{submitStatus}} </button>
+              <button type="submit" class="btn btn-secondary btn-info mr-4"> Submit {{submitStatus}} </button>
             </div>
           </form>
         </div>
@@ -309,7 +309,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 label {
-  font-weight: bold;
+  font-size: 16;
 }
 .container {
   width: 100%;

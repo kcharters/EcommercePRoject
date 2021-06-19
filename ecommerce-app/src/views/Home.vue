@@ -14,12 +14,10 @@
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quaerat voluptate iusto? Nihil voluptas vitae veritatis magnam reprehenderit, reiciendis ex? Libero quasi natus veniam voluptatum, voluptas exercitationem ratione consectetur et!
             </p>
-             <button class="btn btn-secondary btn-info mr-4">Browse Products</button>
+             <button class="btn btn-secondary btn-info mr-4">About Us</button>
           </div>
         </div>
       </div>
-
-    
        <LoginModal></LoginModal>
       <SignUpModal></SignUpModal>
   </div>
@@ -42,14 +40,14 @@ export default {
 <style  lang="scss" >
 .home{
   background-color: #2f6690 ;
-      font-family: 'Indie Flower';
+      font-family: 'Roboto';
 }
 p{
    
 color:white;
 }
 h3{
-       font-family: 'Indie Flower';
+       font-family: 'Roboto';
   color:white;
 }
 </style>

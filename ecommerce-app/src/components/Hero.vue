@@ -12,8 +12,8 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam tempora, iure delectus totam minus quam aperiam ratione dolores magni voluptates ut necessitatibus odio ipsum fuga, voluptas ab praesentium nihil?
                 </p>
                 <div class="hero-btn mt-5">
-                    <button class="btn btn-secondary btn-info mr-4">Explore</button>
-                    <button class="btn btn-secondary btn-info mr-4 ">Products</button>
+                    <button class="btn btn-secondary btn-info mr-4" @click="$router.push('ourCompany')">Explore</button>
+                    <button class="btn btn-secondary btn-info mr-4 " @click="$router.push('shop')">Products</button>
                 </div>
               </div>
             </div>
@@ -38,8 +38,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
+@import url('https://fonts.googleapis.com/css?family=Roboto');
  .hero{
  
     height: 700px;
@@ -47,15 +46,15 @@ export default {
   }
  
   .hero-title{
-     font-family: 'Indie Flower';
+    font-family: 'Roboto', sans-serif;
     color:white;
   }
   p{
-     font-family: 'Indie Flower';
+     font-family: 'Roboto', sans-serif;
     color:white;
   }
   h6{
-          font-family: 'Indie Flower';
+          font-family: 'Roboto', sans-serif;
     color:white;
   }
   .graphic{

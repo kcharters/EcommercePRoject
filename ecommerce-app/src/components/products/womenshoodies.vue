@@ -16,7 +16,7 @@
                         <td>{{ hoodies.description }}</td>
                         <td>{{ hoodies.price }}</td>
                         <td>
-                            <router-link :to="{name: 'editwomenshoodie', params: { id: hoodies.key }}" class="btn btn-primary">Edit
+                            <router-link style="text-decoration: none; color: white;" :to="{name: 'editwomenshoodie', params: { id: hoodies.key }}" class="btn btn-primary">Edit
                             </router-link>
                             <button @click.prevent="deletehoodies(hoodies.key)" class="btn btn-danger">Delete</button>
                         </td>
@@ -72,7 +72,7 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+a{
+    text-decoration: none !important;
 }
 </style>

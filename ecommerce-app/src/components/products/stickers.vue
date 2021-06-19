@@ -16,7 +16,7 @@
                         <td>{{ sticker.description }}</td>
                         <td>{{ sticker.price }}</td>
                         <td>
-                            <router-link :to="{name: 'editstickers', params: { id: sticker.key }}" class="btn btn-primary">Edit
+                            <router-link style="text-decoration: none; color: white;" :to="{name: 'editstickers', params: { id: sticker.key }}" class="btn btn-primary">Edit
                             </router-link>
                             <button @click.prevent="deletesticker(sticker.key)" class="btn btn-danger">Delete</button>
                         </td>
@@ -72,7 +72,7 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+a{
+    text-decoration: none !important;
 }
 </style>

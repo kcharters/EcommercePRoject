@@ -1,21 +1,15 @@
 <template>
   <div class="Hoodies">
-   
 
    <div v-for="(testObject, index) in mappedTest.slice(0, 4)" :key="index">
 
     <div class="d-flex flex-row-4">
                <div class ="
       card-columns">
-     
-     
+ 
     <div v-for="(hoodies, idx) in testObject.hoodies" :key="idx">
  
-       
-      
           <div class="card" style="width: 18rem; margin-left: 20px; ">
-    
-       
             <img :src="hoodies.url" class="card-img-top" alt="..." width="100" height="250"/>
             <div class="card-body">
               <h5 class="card-title">{{ hoodies.name }}</h5>
@@ -74,7 +68,7 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
  .card-columns {
     column-count: 4;
     
@@ -84,6 +78,11 @@ export default {
 .card{
  margin:10px;
  font-size: 12px;
-
+min-height: 500px;
+width: 18rem; margin-left: 20px; 
+}
+.card-img-top{
+width:250px; 
+height:200px;
 }
 </style>

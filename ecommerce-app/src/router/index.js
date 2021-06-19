@@ -6,7 +6,7 @@ import Home from "../views/Home.vue";
 import Admin from "../components/admin/Admin.vue"
 import ProductsCreate from "../components/admin/ProductsCreate.vue"
 import ProductsList from "../components/admin/ProductsList.vue"
-
+import dashboard from "../components/admin/Dashboard.vue"
 import WomensHoodieEdit from "../components/edit/editwomenshoodies.vue"
 import WomensTshirtEdit from "../components/edit/editwomenstshirts.vue"
 import MensHoodieEdit from "../components/edit/editmenshoodies.vue"
@@ -16,7 +16,7 @@ import StickersEdit from "../components/edit/editstickers.vue"
 import ToteEdit from "../components/edit/edittote.vue"
 import PinEdit from "../components/edit/editpins.vue"
 
-import Search from "../components/Search.vue"
+
 
 import firebase from 'firebase/app';
 import "firebase/auth";
@@ -38,60 +38,15 @@ const routes = [
      },
      children:[
       {
+        path: "dashboard",
+       name:"dashboard",
+        component: dashboard,
+        
+      },
+      {
         path: "productslist",
         name:"productslist",
         component: ProductsList, 
-        children:[
-          {
-            path: "editwomenshoodie/:id",
-            name: "editwomenshoodie",
-            component: WomensHoodieEdit,
-            
-          },
-          {
-            path: "editwomenstshirt/:id",
-            name: "editwomenstshirt",
-            component: WomensTshirtEdit,
-            
-          },
-          {
-            path: "editmenshoodie/:id",
-            name: "editmenshoodie",
-            component: MensHoodieEdit,
-            
-          },
-          {
-            path: "editmensthirt/:id",
-            name: "editmensthirt",
-            component: MensTshirtEdit,
-            
-          },
-          {
-            path: "editmugs/:id",
-            name: "editmugs",
-            component: MugsEdit,
-            
-          },
-          {
-            path: "editstickers/:id",
-            name: "editstickers",
-            component: StickersEdit,
-            
-          },
-          {
-            path: "edittote/:id",
-            name: "edittote",
-            component: ToteEdit,
-            
-          },
-          {
-            path: "editpins/:id",
-            name: "editpins",
-            component: PinEdit,
-            
-          },
-
-        ]
         }, 
         {
           path: "productscreate",
@@ -99,8 +54,53 @@ const routes = [
           component: ProductsCreate,
           
         },
-        
-      
+        {
+          path: "editwomenshoodie/:id",
+          name: "editwomenshoodie",
+          component: WomensHoodieEdit,
+          
+        },
+        {
+          path: "editwomenstshirt/:id",
+          name: "editwomenstshirt",
+          component: WomensTshirtEdit,
+          
+        },
+        {
+          path: "editmenshoodie/:id",
+          name: "editmenshoodie",
+          component: MensHoodieEdit,
+          
+        },
+        {
+          path: "editmensthirt/:id",
+          name: "editmensthirt",
+          component: MensTshirtEdit,
+          
+        },
+        {
+          path: "editmugs/:id",
+          name: "editmugs",
+          component: MugsEdit,
+          
+        },
+        {
+          path: "editstickers/:id",
+          name: "editstickers",
+          component: StickersEdit,
+          
+        },
+        {
+          path: "edittote/:id",
+          name: "edittote",
+          component: ToteEdit,
+          
+        },
+        {
+          path: "editpins/:id",
+          name: "editpins",
+          component: PinEdit,  
+        },
     ]     
   },
  
@@ -144,9 +144,8 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "" */ "../views/Search.vue")
-  },
+  },  
 ];
-
 
 const router = new VueRouter({
   mode: 'history',

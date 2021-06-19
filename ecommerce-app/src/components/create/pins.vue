@@ -1,8 +1,7 @@
 <template>
   <div>
       <h2>
-        Add item
-        
+        Add item 
       </h2>
         <form @submit="onSubmit" id="abc">
            <div class="form-group">
@@ -66,8 +65,7 @@ section{
    margin: 0 auto;
     float: none;
 }
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+table,td,tr{
+font-family: 'Roboto' !important;
 }
-
 </style>
