@@ -1,4 +1,8 @@
 # EcommerceProject
+## The website
+### Link
+https://ecommerceapp-e526f.web.app/
+
 ## Documentation 
 This project is an E-commerce site using Vue.js framework, firebase for the backend and Stripe for secure payments. 
 
