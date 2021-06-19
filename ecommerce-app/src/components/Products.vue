@@ -1,48 +1,70 @@
 <template>
   <div class="panel-body">
-    <h3>Products</h3>
-    <hr>
-    <h1>Pins</h1>
-    <hr>
+               <div id="dynamic-component-demo" class="demo">
+      <button
+        v-for="tab in tabs"
+        v-bind:key="tab.name"
+        v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
+        v-on:click="currentTab = tab" 
+        class="btn btn-info"
+      >
+        {{ tab.name }}
+      </button>
 
-    <Pins></Pins>
-    <hr>
-    <h1>Stickers</h1>
-    <hr>
-
-   <Stickers></Stickers>
-    <hr>
-    <h1>Totes</h1>
-    <hr>
-   <Totes></Totes>
- <hr>
-    <h1>Mugs</h1>
-    <hr>
-   <Mugs></Mugs>
-  
-<hr>
-    <h1>Hoodies</h1>
-    <hr>
-  <Hoodies></Hoodies>
-  <hr>
-    <h1>Tshirts</h1>
-    <hr>
-    <Tshirts></Tshirts>
+      <component v-bind:is="currentTab.component" class="tab"></component>
+      <router-view :key="$route.fullPath"></router-view>
+            
+      
+    </div> 
     
 <AddToCartModal></AddToCartModal>
   </div>
-
-  
 </template>
 
 <script>
 import { productsRef } from "../firebase-config.js";
 import firebase from "../firebase-config.js"
+import pins from "../components/Pins.vue"
+import stickers from "../components/Stickers.vue"
+import mugs from "../components/Mugs.vue"
+import tote from "../components/Totes.vue"
+import tshirts from "../components/Tshirts.vue"
+import hoodies from "../components/Hoodies.vue"
+
+var  tabs = [
+        {
+          name: "Pins",
+          component: pins
+        },
+        {
+          name: "Mugs",
+          component: mugs
+        },
+        {
+          name: "Tote",
+          component: tote
+        },
+        {
+          name: "Stickers",
+          component: stickers
+        },
+        {
+          name: "Hoodies",
+          component: hoodies
+        },
+        {
+          name: "tshirts",
+          component: tshirts
+        },
+    
+      ]
 export default {
   name: "Products",
   data: function () {
     return {
       products: [],
+    tabs: tabs,
+          currentTab: tabs[0]
     };
   },
   firebase: {

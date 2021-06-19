@@ -5,18 +5,10 @@
    <div v-for="(testObject, index) in mappedTest.slice(0, 4)" :key="index">
 
     <div class="d-flex flex-row-4">
-               <div class ="
-      card-columns">
-     
-     
-    <div v-for="(tshirts, idx) in testObject.tshirts" :key="idx">
- 
-       
-      
-          <div class="card" style="width: 18rem; margin-left: 20px; ">
-         
-       
-            <img :src="tshirts.url" class="card-img-top" alt="..." width="100" height="250"/>
+    <div class ="card-columns">
+    <div class="item" v-for="(tshirts, idx) in testObject.tshirts" :key="idx">
+          <div class="card" >
+            <img :src="tshirts.url" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{ tshirts.name }}</h5>
               <p class="card-subtitle mb-2 text-muted">
@@ -72,7 +64,8 @@ export default {
   },
 };
 </script>
-<style>
+<style scoped>
+
  .card-columns {
     column-count: 4;
     
@@ -82,6 +75,12 @@ export default {
 .card{
  margin:10px;
  font-size: 12px;
-
+min-height: 500px;
+width: 18rem; margin-left: 20px; 
 }
+.card-img-top{
+width:250px; 
+height:200px;
+}
+
 </style>

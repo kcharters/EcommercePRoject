@@ -16,7 +16,7 @@
                         <td>{{ pin.description }}</td>
                         <td>{{ pin.price }}</td>
                         <td>
-                            <router-link :to="{name: 'editpins', params: { id: pin.key }}" class="btn btn-primary">Edit
+                            <router-link style="text-decoration: none; color: white;" :to="{name: 'editpins', params: { id: pin.key }}" class="btn btn-primary">Edit
                             </router-link>
                             <button @click.prevent="deletepin(pin.key)" class="btn btn-danger">Delete</button>
                         </td>
@@ -73,7 +73,7 @@ export default {
 }
 </script>
 <style scoped>
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+a{
+    text-decoration: none !important;
 }
 </style>

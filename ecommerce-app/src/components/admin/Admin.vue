@@ -2,29 +2,23 @@
   <div class="admin">
     <!-- page-content  -->
     <main class="page-content pt-2">
-        <div class="btn">
-            <p
+            <button
               id="toggle-sidebar"
               @click="toggleSidebar"
-              class="btn btn-secondary rounded-0"
-            >
-              <span>Toggle Sidebar</span>
-            </p>
-          </div>
+              class="btn btn-secondary btn-info mr-4"
+            >Toggle Sidebar
+            </button>
+        <button class="btn btn-secondary btn-info mr-4" @click="$router.push('/')">
+            Main Site
+        </button>
       <div class="container-fluid p-5">
         <div class="row">
         
           <div class="form-group col-md-12">
             <h2>Admin Area</h2>
-
-            <component
-              :is="theComponent"
-              v-bind="somethingWeWantToPass"
-            ></component>
-            <router-view :key="$route.fullPath"> </router-view>
+            <router-view></router-view>
           </div>
         </div>
-
         <div class="page-wrapper default-theme sidebar-bg bg toggled">
           <nav id="sidebar" class="sidebar-wrapper">
             <div class="sidebar-content">
@@ -73,10 +67,10 @@
                 </span>
                 <ul>
                   <li class="sidebar-dropdown">
-                    <a @click="goDashboard">
+                    <router-link to="/admin/dashboard">
                       <i class="fa fa-tachometer-alt"></i>
                       <span class="menu-text">Dashboard</span>
-                    </a>
+                    </router-link>
                   </li>
   <li class="sidebar-dropdown" >
                             <a @click="dropdownMenu">
@@ -86,8 +80,7 @@
                             <div class="sidebar-submenu">
                                 <ul>
                                     <li>
-                                         <router-link to="/admin/productslist">Products  </router-link>
-
+                                        <a @click="goProducts">Products</a>
                                     </li>
                                     <li>
                                         <router-link to="/admin/productscreate">Add new Products</router-link>
@@ -157,7 +150,6 @@ export default {
       somethingWeWantToPass: "",
     };
   },
-
   created() {},
   computed: {},
   methods: {
@@ -199,9 +191,4 @@ section {
   float: right;
 }
 
-span,
-h2,
-small,a,li {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif !important;
-}
 </style>

@@ -4,18 +4,20 @@
          <LoginModal></LoginModal>
       <SignUpModal></SignUpModal>
       <AddToCartModal></AddToCartModal>
-    <h1>FAQ</h1>
+      <FAQ></FAQ>
   </div>
 </template>
 
 <script>
 import LoginModal from '../components/LoginModal.vue';
 import SignUpModal from '../components/SignUpModal.vue';
+import FAQ from '../components/FAQ.vue'
 export default {
     name: "Home",
     components:{
       SignUpModal,
-      LoginModal
+      LoginModal,
+      FAQ
 
     }
 };

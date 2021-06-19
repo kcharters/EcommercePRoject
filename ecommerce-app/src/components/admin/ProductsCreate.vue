@@ -8,7 +8,7 @@
         v-bind:key="tab.name"
         v-bind:class="['tab-button', { active: currentTab.name === tab.name }]"
         v-on:click="currentTab = tab" 
-        class="btn btn-info"
+        class="btn btn-info mr-4"
       >
         {{ tab.name }}
       </button>
@@ -95,8 +95,5 @@ section{
   float: left;
 }
 
-*{
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
-}
 
 </style>
