@@ -49,7 +49,11 @@ to deploy hosting only use
 ```
 firebase deploy --only hosting 
 ```
-to deploy hosting and database use 
+to deploy everything use 
 ```
-firebase dploy
+firebase deploy
 ```
+### For admin access 
+
+login with email: admin@admin.com password: admin1 
+this is to access the admin side of the site
